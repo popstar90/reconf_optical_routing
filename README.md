@@ -1,1 +1,2 @@
-Reconfigurer le routage optique
+Reconfigurer le routage optique. 
+Simulateur en cours... 
