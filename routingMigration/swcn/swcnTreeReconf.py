@@ -50,6 +50,7 @@ class SwcnTreeReconf:
                         #Enlever node de self.my_currdiv_nodes(grace sel.my_currdiv_nodes.remove(node))
                         break
                     else:
+                        pass
                         #call reconf_dis_subtree pour mettre à jour self.reconf_order
                         #Mettre à jour l'arbre courant
         # verifier si l'arbre courant égale à l'arbre final.
