@@ -14,7 +14,7 @@ import networkx as nx
 from helper.queue import adaptable_heap_priority_queue as hq
 
 
-def based_dijkstra(G=nx.Graph(), src=''):
+def based_dijkstra(G=nx.Graph(), src='',wave=0):
 
     """
 
@@ -29,6 +29,8 @@ def based_dijkstra(G=nx.Graph(), src=''):
         Le graphe non orienté dont il faut pour construire un arbre
     src: str
         la source de l'arbre
+    wave: int
+         la longueur d'onde à attribuer à l'arbre
     Returns
     -------
     networkx.classes.digraph.DiGraph
@@ -55,7 +57,7 @@ def based_dijkstra(G=nx.Graph(), src=''):
             weight_dict[i] = float('inf')
         pred_dict[i] = None
         pqlocator_dict[i] = pq.add(weight_dict[i], i)
-    mytree = nx.DiGraph()  # L'arbre à construire)
+    mytree = nx.DiGraph(wavelength=wave)  # L'arbre à construire)
     nodes_set = set()
     edges_set = set()
     while not pq.is_empty():
@@ -97,11 +99,13 @@ def based_dijkstra(G=nx.Graph(), src=''):
                 print("e", e)
                 print("edges_tree", edges_list)
                 print("G edges", list(G.edges()))
+                print("ECHEC DE L'AJOUT DES INFOS DE LIENS APRES DIJKSTRA")
                 exit(0)
     print("DIJSKRTA !!!!")
     print("Nodes", mytree.nodes(data=True))
     print('Edges', mytree.edges(data=True))
-    print(nx.is_tree(mytree))
+    print('Wavelength', mytree.graph)
+    print("ARBORESCENCE", nx.is_arborescence(mytree))
     return mytree
 
 

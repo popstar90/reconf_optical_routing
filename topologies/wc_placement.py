@@ -85,6 +85,3 @@ class Placement:
             attrs[n] = {'node_data': data}
         nx.set_node_attributes(graph, attrs)
         return graph
-
-
-

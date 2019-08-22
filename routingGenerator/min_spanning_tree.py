@@ -14,7 +14,7 @@ Ce module contient des fonctions permettant de construire un arbre couvrant de p
 import networkx as nx
 
 
-def span_tree(g=nx.Graph(), src="", algo="prim"):
+def span_tree(g=nx.Graph(), src="", wave=0, algo="prim"):
     """
     Extension de l'algo de prim ou de kruskal pour l'arbre couvrant de poids minimal:
 
@@ -52,7 +52,7 @@ def span_tree(g=nx.Graph(), src="", algo="prim"):
             edges_set.update(branch_edges)
     tree_edges = list(edges_set)
     tree_nodes = list(nodes_set)
-    tree = nx.DiGraph()
+    tree = nx.DiGraph(wavelength=wave)
     tree.add_nodes_from(tree_nodes)
     tree.add_edges_from(tree_edges)
     for n in tree_nodes:
@@ -65,5 +65,6 @@ def span_tree(g=nx.Graph(), src="", algo="prim"):
     print("PRIM !!!!")
     print("Nodes", tree.nodes(data=True))
     print('Edges', tree.edges(data=True))
-    print(nx.is_tree(tree))
+    print('Wavelength', tree.graph)
+    print("ARBORESCENCE", nx.is_arborescence(tree))
     return tree

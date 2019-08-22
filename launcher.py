@@ -47,7 +47,7 @@ if __name__ == '__main__':
     logger.info("Simulations parameters checking process starting")
     parser = argparse.ArgumentParser(description='Déterminer les paramètres de la simulation')
     # Topologie à charger
-    parser.add_argument("-t=", "--topo=", dest="net_topo", type=str, required=True, metavar=" ",  help="nom la topologie à simuler")
+    parser.add_argument("-t=", "--topo=", dest="net_topo", type=str, required=True, metavar=" ",  help="nom de la topologie à simuler")
 
     # 0 = Réseau WDM sans conversion de longueur d'onde
     # 0.5 = Réseau WDM avec propriété de conversion partielle de longueur d'onde(valeur par défaut)

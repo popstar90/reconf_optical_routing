@@ -12,7 +12,8 @@ def is_leaf(g=nx.DiGraph(), node=""):
     :param node:
     :return:
     """
-    if len(nx.predecessor(g, node)) == g.degree(node) == 1:
+    #if len(nx.predecessor(g, node)) == g.degree(node) == 1:
+    if g.out_degree(node)  == 0 and g.in_degree(node)==1:
         return True
     else:
         return False
@@ -28,14 +29,15 @@ def all_leafs(g=nx.DiGraph):
 
 def subtree(T=nx.DiGraph(), src="", D=[] ):
     """
-G
+    Sous arbre 
     :param T:
     :param src:
     :param D:
     :return:
     """
     tcopy = T.copy()
-    mytree = nx.DiGraph()  # L'arbre à construire)
+    w = tcopy.graph
+    mytree = nx.DiGraph(wavelength=w['wavelength'])  # L'arbre à construire)
     nodes_set = set([src]+D)
     edges_set = set()
     for i in D:
@@ -59,7 +61,8 @@ G
             print("ERREUR!!!")
     print("Nodes", mytree.nodes(data=True))
     print('Edges', mytree.edges(data=True))
-    print(nx.is_tree(mytree))
+    print('Wavelength', mytree.graph)
+    print("ARBORESCENCE", nx.is_arborescence(mytree))
     return mytree
 
 

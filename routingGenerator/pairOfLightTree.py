@@ -21,7 +21,6 @@ from helper import customRandom as cr
 from routingGenerator import shortest_path_tree as spt
 from routingGenerator import min_spanning_tree as mst
 
-
 class PairOfLightTree:
 
     """
@@ -47,12 +46,7 @@ class PairOfLightTree:
 
         """
         self.graph = g
-        self.hi()
 
-
-    def hi(self):
-
-        print("hi")
 
     def generate(self):
 
@@ -69,11 +63,13 @@ class PairOfLightTree:
         nodes_list = list(self.graph.nodes())  # Liste des noeuds
         source_index = str(cr.pick_one_numbers_uniformly(int(min(nodes_list)), int(max(nodes_list))))
         print("src", source_index)
+        #choisir aléatoirement la longueur d'onde à affecter aux liens
+        wave = cr.pick_one_numbers_uniformly(0, 15)
         # 2 Construire l'arbre initial avec dijkstra
         # 2.1. Construire l'arbre des plus courts chemins de source_index vers les autres noeuds du graphe
-        temp_initial_route = spt.based_dijkstra(self.graph, source_index)
+        temp_initial_route = spt.based_dijkstra(self.graph, source_index,wave)
         # 2.2 Construire l'arbre minimum de steiner avec prim pour le graphe entier avec pour source source_index
-        temp_final_route = mst.span_tree(self.graph, source_index)
+        temp_final_route = mst.span_tree(self.graph, source_index,wave)
         # 2.2 Rechercher l'ensemble des feuilles de  l'arbre initial D1
         D1 = ntp.all_leafs(temp_initial_route)
         print("D1", D1)
@@ -96,19 +92,19 @@ class PairOfLightTree:
         # initial_route.nodes[n]['node_data'] = temp_initial_route.nodes[n]['node_data']
         final_route = ntp.subtree(temp_final_route, source_index, D)
         print('FINAL', list(final_route.edges(data=True)), nx.is_tree(final_route))
-        colors = ['gray' if data['node_data']['wcn'] == True else 'white' for (n, data) in initial_route.nodes(data=True)]
-        plt.figure()
+        #colors = ['gray' if data['node_data']['wcn'] == True else 'white' for (n, data) in initial_route.nodes(data=True)]
+        #plt.figure()
         #pos_initial = layout.hierarchy_pos(initial_route, source_index)
-        nx.draw(initial_route, node_color=colors, with_labels=True, font_weight='bold')
-        path = Path(__file__).resolve().with_name("initial.png")
-        plt.savefig(str(path))
-        plt.close()
-        colors = ['gray' if data['node_data']['wcn'] == True else 'white' for (n, data) in final_route.nodes(data=True)]
-        plt.figure()
+        #nx.draw(initial_route, node_color=colors, with_labels=True, font_weight='bold')
+        #path = Path(__file__).resolve().with_name("initial.png")
+        #plt.savefig(str(path))
+        #plt.close()
+        #colors = ['gray' if data['node_data']['wcn'] == True else 'white' for (n, data) in final_route.nodes(data=True)]
+        #plt.figure()
         #pos_final = layout.hierarchy_pos(final_route, source_index)
-        nx.draw(final_route, node_color=colors, with_labels=True, font_weight='bold')
-        path = Path(__file__).resolve().with_name("final.png")
-        plt.savefig(str(path))
-        plt.close()
+        #nx.draw(final_route, node_color=colors, with_labels=True, font_weight='bold')
+        #path = Path(__file__).resolve().with_name("final.png")
+        #plt.savefig(str(path))
+        #plt.close()
         print(" paire_of_lightree_generated")
         return initial_route, final_route

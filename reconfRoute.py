@@ -92,6 +92,7 @@ class ReconfRoute:
         topo = Topology(self.param['net_topo'])
         graph = topo.create_topo()
         logger.info("Topology was created")
+        #exit(-1)
         d = dict()
         if self.param['net_type'] == 0.5:
             d = {0: {'min': 50, 'max': 75}, 1: {'min': 25, 'max': 50},
@@ -101,13 +102,15 @@ class ReconfRoute:
         else:
             d = {0: {'min': 100, 'max': 100}}
         logger.info("Cycle of 3 Simulations starting")
+        #Pour chaque topologie virtuelle faire
         for key, item in d.items():
-            # Faire une simulation : une simulation contient 5000 processus
+            # Faire une simulation : une simulation contient N processus
             N = self.param['size']
             min_value = item['min']
             max_value = item['max']
             logger.info("Simulation " + str(key))
             for i in range(0, N):
+                # Pour chaque processus faire
                 print("TOUR :", i)
                 # Définition du processus
                 # 1.2 Choix des noeuds ayant la capacité  de conversion de longueur d'onde
@@ -116,12 +119,12 @@ class ReconfRoute:
                 net = place_wcn.assign(graph)
                 # 1.3 Initialisation du flux
                 # Pour marquer que le flux est transporté par un lien on ajoute un attribut flow au lien avec pour valeur 1. Sinon 0
-                # On suppose qu'au debut tous les l'attribut flow a pour valeur 0 pour chaque lien du graphe.
+                # On suppose qu'au debut l'attribut flow a pour valeur 0 sur chaque lien du graphe.
                 # Autrement dit, aucun flux ne circule sur les liens du graphe
                 for e in net.edges():
                     net[e[0]][e[1]]['edge_data'] = {'flow': 0}
                 # On suppose que les liens(fibres) ont une capacité de 16 longueurs distinctes
-                wavelengths_list = list(range(0, 16))
+                #wavelengths_list = list(range(0, 16))
                 # 2. Generation du routage initial et du routage final
                 logger.info("Routing generation process is starting ")
                 routing_class = load_class(package_name="routingGenerator", algo=route_pair(self.param['paire_route_type']))
@@ -129,6 +132,7 @@ class ReconfRoute:
                 initial_route, final_route = route_generator.generate()
                 logger.info("Routing generation process completed successfully ")
                 # Génération du flux
+                #Simuler ici une circulation du flux sur l'arbre initial
                 # 3. Migration de routage
                 migration_class = load_class(package_name="routingMigration", sub_package_name=migrate_net(self.param['net_type']),
                                              algo=self.param['algo'])
@@ -207,11 +211,11 @@ def load_class(package_name, sub_package_name="",algo=""):
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
     algo_dir = os.getcwd()+os.sep+package_name+os.sep+sub_package_name
     paths = list(sys.path)
-    # print("BEFORE", sys.path)
+    print("BEFORE", sys.path)
     sys.path.insert(0, algo_dir)
-    # print("AFTER", sys.path)
-    # print('algo_dir', algo_dir)
-    # print('algo', algo)
+    print("AFTER", sys.path)
+    print('algo_dir', algo_dir)
+    print('algo', algo)
 
     module = ""
     try:
