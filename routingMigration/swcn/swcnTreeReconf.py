@@ -192,6 +192,7 @@ class SwcnTreeReconf:
             partial_ancestorsz = [a for a in ancestorsz if not nsp.is_divergent(init_tree,end_tree,a) and is_wcnz[a]==True]
             if len(partial_ancestors0) !=0 and len(partial_ancestorsz) != 0 and len(set(partial_ancestors0).intersection(set(partial_ancestorsz)))!=0:
                 for n in partial_ancestorsz:
+                    pass
                     
             else:
                 nbsc = self.root
