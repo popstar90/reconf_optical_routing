@@ -1,5 +1,13 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
-A Ã©crire
+Created on Fri Aug 23 09:39:17 2019
+
+@author: fatta
+"""
+
+"""
+A ÃƒÂ©crire
 """
 import networkx as nx
 import os
@@ -52,12 +60,12 @@ class SwcnTreeReconf:
                         break
                     else:
                         pass
-                        #call reconf_dis_subtree pour mettre à jour self.reconf_order
-                        #Mettre à jour l'arbre courant
-        # verifier si l'arbre courant égale à l'arbre final.
-        # Si oui alors retourner self.reconf_order sinon gérer les catégories 2
+                        #call reconf_dis_subtree pour mettre Ã  jour self.reconf_order
+                        #Mettre Ã  jour l'arbre courant
+        # verifier si l'arbre courant Ã©gale Ã  l'arbre final.
+        # Si oui alors retourner self.reconf_order sinon gÃ©rer les catÃ©gories 2
         #Pour ce faire rechercher les noeuds convergents de current_tree 
-        # et construire à partir du plus profond dans l'arbre seg0 puis segz
+        # et construire Ã  partir du plus profond dans l'arbre seg0 puis segz
         # ensuite call select_shared_subtree puis reconf_shared_subtree
         
         
@@ -88,7 +96,7 @@ class SwcnTreeReconf:
                         n = v
                         break
             # check des 2 conditions
-            if not self._is_fulfil_cond1(init_tree,end_tree,n,div_node) and not self._is_fulfil_cond2(init_tree,end_tree,n,div_node):
+            if not is_fullfil_cond1(init_tree,end_tree,n,div_node) and not is_fullfil_cond2(init_tree,end_tree,n,div_node):
                 pair_cg_nodes.append(n)
             else:
                 desc0 = set(nsp.get_descendants(init_tree, n))
@@ -104,10 +112,8 @@ class SwcnTreeReconf:
         print("step 2 end")
 
         print("step 3 begin")
-        
         if len(pair_cg_nodes) == 0:
             return None,None
-        
         print("step 3 end")
 
         print("step 4 begin")
@@ -118,9 +124,9 @@ class SwcnTreeReconf:
         for n in pair_cg_nodes:
             # descendants de n sur t0
             desc_n = set(nsp.get_descendants(init_tree, n))
-            # pair_cg_nodes privé de n
+            # pair_cg_nodes privÃ© de n
             other_set = set(pair_cg_nodes).difference(set([n]))
-            #ensemble des descendants de n n'appartenant pas à other_set
+            #ensemble des descendants de n n'appartenant pas Ã  other_set
             temp_set =desc_n.difference(other_set)
             if len(temp_set) == 0:
                 D0.append(n)
@@ -137,9 +143,9 @@ class SwcnTreeReconf:
         for n in pair_cg_nodes:
             # descendants de n sur t0
             desc_n = set(nsp.get_descendants(end_tree, n))
-            # pair_cg_nodes privé de n
+            # pair_cg_nodes privÃ© de n
             other_set = set(pair_cg_nodes).difference(set([n]))
-            #ensemble des descendants de n n'appartenant pas à other_set
+            #ensemble des descendants de n n'appartenant pas Ã  other_set
             temp_set =desc_n.difference(other_set)
             if len(temp_set) == 0:
                 Dn.append(n)
@@ -147,11 +153,13 @@ class SwcnTreeReconf:
 
         print("step 5 end")
          
-        print("Fin algo 1")
+        print("step 6 begin")
         
         return st0,stn
     
-
+        print("step 6 begin")
+    
+        print("Fin algo 1")
         
         
     
@@ -163,98 +171,77 @@ class SwcnTreeReconf:
         """
     
     
-    # def select_shared_subtree(self, seg0,segz, init_tree=nx.DiGraph(),end_tree=nx.DiGraph()):
-    def select_shared_subtree(self,conv_node, init_tree=nx.DiGraph(),end_tree=nx.DiGraph()):
+    def select_shared_subtree(self, seg0,segz, init_tree=nx.DiGraph(),end_tree=nx.DiGraph()):
         """
     
         Ecrire le commentaire
     
         """
-        print("step 1 begin")
-        nbsc = "0"
-        path0 = nx.shortest_path(init_tree, self.root, conv_node)
-        pathz = nx.shortest_path(end_tree, self.root, conv_node)
-        
-        if len(path0) == 2 or len(pathz)==2 or len(set(path0).intersection(set(pathz)))==0:
-            nbsc = self.root
-        else:
-            ancestors0 = []
-            ancestorsz = []
-            #ancestors of conv_node on T0
-            ancestors0=  reversed(path0[1:len(path0)-1]) # du plus proche de conv_node au plus distant
-            #ancestors of conv_node on Tz
-            ancestorsz=  reversed(pathz[1:len(pathz)-1])
-            # Garder ceux qui sont non divergents et qui ont sont dans Vc
-            is_wcn0 =nx.get_node_attributes(init_tree,'wcn')
-            is_wcnz =nx.get_node_attributes(init_tree,'wcn')
-            partial_ancestors0 = [a for a in ancestors0 if not nsp.is_divergent(init_tree,end_tree,a) and is_wcn0[a]==True]
-            is_wcnz =nx.get_node_attributes(init_tree,'wcn')
-            partial_ancestorsz = [a for a in ancestorsz if not nsp.is_divergent(init_tree,end_tree,a) and is_wcnz[a]==True]
-            if len(partial_ancestors0) !=0 and len(partial_ancestorsz) != 0 and len(set(partial_ancestors0).intersection(set(partial_ancestorsz)))!=0:
-                for n in partial_ancestorsz:
-                    
-            else:
-                nbsc = self.root
-
-            
-        print("step 1 end")
-        
-        
-        
     def reconf_shared_subtree(self, init_subtree=nx.DiGraph(),end_subtree=nx.DiGraph()):
         """
     
         Ecrire le commentaire
     
         """
-    def _is_fulfil_cond1(self,t0=nx.DiGraph(),tz=nx.DiGraph(), conv_node="0", div_node="0"):
-        """
-        A Ecrire
-        """ 
-        verdict = False
-        #ancetres sur To de conv_node situé sur div_node->conv_node
-        path1 = nx.shortest_path(t0,div_node,conv_node)
-        if len(path1) > 2:
-            ancestors1=  path1[1:len(path1)-1]
-            #garder ceux qui n'appartiennent pas à tz
-            final_ancestors = []
-            tz_nodes = list(tz.nodes())
-            for a in ancestors1:
-                if a not in tz_nodes:
-                    final_ancestors.append(a)
-                if len(final_ancestors) != 0:
-                    for x in final_ancestors:
-                    # rechercher la liste des descendants de x qui ne sont pas ancestre de
-                        print(x)
-                        all_desc_x = nsp.get_descendants(t0,x)
-                        path2 = nx.shortest_path(t0, x, conv_node)
-                        ancestors2 = path2[1:len(path2) - 1]
-                        partial_desc_x = set(all_desc_x).difference(set(ancestors2))
-                        all_desc_div_node = nsp.get_descendants(tz,div_node)
-                        print(type(partial_desc_x))
-                        if len(partial_desc_x.difference(set(all_desc_div_node))) > 0:
-                            verdict = True
-                            print("condition 1 verified")
-                            break
-        return verdict
-    
-    def _is_fulfil_cond2(self, t0=nx.DiGraph(), tz=nx.DiGraph(), conv_node="0", div_node="0"):
-        """
-        A ecrire
-        """
-        verdict = False
-        # ancetres sur To de conv_node situé sur div_node->conv_node
-        path1 = nx.shortest_path(t0, div_node, conv_node)
-        if (len(path1)>2):
-            ancestors1 = path1[1:len(path1) - 1]
-            tz_nodes = set(list(tz.nodes()))
-            # garder ceux qui appartiennent à tz
-            partial_ancestors = set(ancestors1).intersection(tz_nodes)
-            if len(partial_ancestors) != 0:
-                all_desc_div_node = nsp.get_descendants(tz, div_node)
-                # De partial_ancestors garde ceux qui sont pas descendants de div_node sur tz
-                final_ancestors = partial_ancestors.difference(set(all_desc_div_node))
-                if len(final_ancestors) != 0:
+
+
+def is_fullfil_cond1(t0=nx.DiGraph(),tz=nx.DiGraph(),conv_node="0",div_node="0"):
+    """
+    A Ã©crire
+    :param t0:
+    :param tz:
+    :param conv_node:
+    :param div_node:
+    :return:
+    """
+    verdict = False
+    #ancetres sur To de conv_node situÃ© sur div_node->conv_node
+    path1 = nx.shortest_path(t0,div_node,conv_node)
+    if len(path1) > 2:
+        ancestors1=  path1[1:len(path1)-1]
+        #garder ceux qui n'appartiennent pas Ã  tz
+        final_ancestors = []
+        tz_nodes = list(tz.nodes())
+        for a in ancestors1:
+            if a not in tz_nodes:
+                final_ancestors.append(a)
+        if len(final_ancestors) != 0:
+            for x in final_ancestors:
+                # rechercher la liste des descendants de x qui ne sont pas ancestre de
+                print(x)
+                all_desc_x = nsp.get_descendants(t0,x)
+                path2 = nx.shortest_path(t0, x, conv_node)
+                ancestors2 = path2[1:len(path2) - 1]
+                partial_desc_x = set(all_desc_x).difference(set(ancestors2))
+                all_desc_div_node = nsp.get_descendants(tz,div_node)
+                if len(partial_desc_x.difference(set(all_desc_div_node))) > 0:
                     verdict = True
-                    print("condition 2 verified")
-        return verdict
+                    print("condition 1 vÃ©rifiÃ©e")
+                    break
+    return verdict
+
+def is_fullfil_cond2(t0=nx.DiGraph(), tz=nx.DiGraph(), conv_node="0", div_node="0"):
+    """
+    A Ã©crire
+    :param t0:
+    :param tz:
+    :param conv_node:
+    :param div_node:
+    :return:
+    """
+
+    verdict = False
+    # ancetres sur To de conv_node situÃ© sur div_node->conv_node
+    path1 = nx.shortest_path(t0, div_node, conv_node)
+    if (len(path1)>2):
+        ancestors1 = path1[1:len(path1) - 1]
+        tz_nodes = set(list(tz.nodes()))
+        # garder ceux qui appartiennent Ã  tz
+        partial_ancestors = set(ancestors1).intersection(tz_nodes)
+        if len(partial_ancestors) != 0:
+            all_desc_div_node = nsp.get_descendants(tz, div_node)
+            # De partial_ancestors garde ceux qui sont pas descendants de div_node sur tz
+            final_ancestors = partial_ancestors.difference(set(all_desc_div_node))
+            if len(final_ancestors) != 0:
+                verdict = True
+    return verdict
