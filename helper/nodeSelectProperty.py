@@ -81,9 +81,7 @@ def get_parent(T=nx.DiGraph(), node="0"):
     """
     
     parent = []
-    itere = T.predecessors(node)
-    for n in itere:
-        parent.append(n)
+    parent = list(T.predecessors(node))
     return parent
 
 def is_convergent(T0=nx.DiGraph(),Tz=nx.DiGraph(),node="0"):
@@ -106,8 +104,8 @@ def is_convergent(T0=nx.DiGraph(),Tz=nx.DiGraph(),node="0"):
     parent0 = get_parent(T0,node)
     parentz = get_parent(Tz,node)
     verdict = False
-    if len(parent0) == len(parentz)== 1:
-        if parent0[0]==parentz[0]:
+    if len(parent0) == len(parentz) == 1:
+        if parent0[0] != parentz[0]:
             verdict = True
     return verdict
 
@@ -128,9 +126,9 @@ def is_divergent(T0=nx.DiGraph(),Tz=nx.DiGraph(),node="0"):
         True s'il est divergent et False dans le cas contraire
     """
     verdict = False
-    if not ntp.is_leaf(T0,node) and not ntp.is_leaf(Tz,node="0"):
-        childs0 = get_childs(T0,node)
-        childsz = get_childs(Tz,node)
+    if not ntp.is_leaf(T0,node) and not ntp.is_leaf(Tz,node):
+        childs0 = get_childs(T0, node)
+        childsz = get_childs(Tz, node)
         for n in childs0:
             if n not in childsz:
                 verdict = True

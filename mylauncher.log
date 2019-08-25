@@ -1,0 +1,570 @@
+2019-08-23 21:09:45,800 [7164] INFO     __main__: Simulations parameters checking process starting
+2019-08-23 21:09:45,819 [7164] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-23 21:09:45,828 [7164] INFO     __main__: Cycle of Simulations starting
+2019-08-23 21:09:55,462 [7164] INFO     reconfRoute: Topology was created
+2019-08-23 21:09:55,468 [7164] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-23 21:09:55,478 [7164] INFO     reconfRoute: Simulation 0
+2019-08-23 21:09:55,487 [7164] INFO     reconfRoute: Wavelength converter placement 
+2019-08-23 21:09:55,651 [7164] INFO     reconfRoute: Routing generation process is starting 
+2019-08-23 21:09:55,833 [7164] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-23 21:09:55,886 [7164] INFO     reconfRoute: Routing switching process is starting 
+2019-08-23 21:09:55,920 [7164] INFO     reconfRoute: Wavelength converter placement 
+2019-08-23 21:09:55,930 [7164] INFO     reconfRoute: Routing generation process is starting 
+2019-08-23 21:09:56,001 [7164] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-23 21:09:56,021 [7164] INFO     reconfRoute: Routing switching process is starting 
+2019-08-23 21:09:56,074 [7164] INFO     reconfRoute: Wavelength converter placement 
+2019-08-23 21:09:56,086 [7164] INFO     reconfRoute: Routing generation process is starting 
+2019-08-23 21:09:56,210 [7164] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-23 21:09:56,240 [7164] INFO     reconfRoute: Routing switching process is starting 
+2019-08-23 21:09:56,289 [7164] INFO     __main__: Route reconfiguration completed successfully switching process is starting 
+2019-08-24 12:07:12,218 [13464] INFO     __main__: Simulations parameters checking process starting
+2019-08-24 12:07:12,240 [13464] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-24 12:07:12,247 [13464] INFO     __main__: Cycle of Simulations starting
+2019-08-24 12:07:14,732 [13464] INFO     reconfRoute: Topology was created
+2019-08-24 12:07:14,735 [13464] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-24 12:07:14,745 [13464] INFO     reconfRoute: Simulation 0
+2019-08-24 12:07:14,759 [13464] INFO     reconfRoute: Wavelength converter placement 
+2019-08-24 12:07:14,771 [13464] INFO     reconfRoute: Routing generation process is starting 
+2019-08-24 12:07:14,981 [13464] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-24 12:07:15,123 [13464] INFO     reconfRoute: Routing switching process is starting 
+2019-08-24 12:07:15,133 [13464] INFO     reconfRoute: Wavelength converter placement 
+2019-08-24 12:07:15,175 [13464] INFO     reconfRoute: Routing generation process is starting 
+2019-08-24 12:07:15,248 [13464] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-24 12:07:15,263 [13464] INFO     reconfRoute: Routing switching process is starting 
+2019-08-24 12:07:15,291 [13464] INFO     reconfRoute: Wavelength converter placement 
+2019-08-24 12:07:15,313 [13464] INFO     reconfRoute: Routing generation process is starting 
+2019-08-24 12:07:15,389 [13464] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-24 12:07:15,401 [13464] INFO     reconfRoute: Routing switching process is starting 
+2019-08-24 12:07:15,419 [13464] INFO     __main__: Route reconfiguration completed successfully switching process is starting 
+2019-08-24 12:40:07,538 [11336] INFO     __main__: Simulations parameters checking process starting
+2019-08-24 12:40:07,540 [11336] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-24 12:40:07,548 [11336] INFO     __main__: Cycle of Simulations starting
+2019-08-24 12:40:08,734 [11336] INFO     reconfRoute: Topology was created
+2019-08-24 12:40:08,737 [11336] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-24 12:40:08,750 [11336] INFO     reconfRoute: Simulation 0
+2019-08-24 12:40:08,763 [11336] INFO     reconfRoute: Wavelength converter placement 
+2019-08-24 12:40:08,780 [11336] INFO     reconfRoute: Routing generation process is starting 
+2019-08-24 12:40:08,865 [11336] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-24 12:40:08,939 [11336] INFO     reconfRoute: Routing switching process is starting 
+2019-08-24 12:40:08,964 [11336] INFO     reconfRoute: Wavelength converter placement 
+2019-08-24 12:40:08,974 [11336] INFO     reconfRoute: Routing generation process is starting 
+2019-08-24 12:40:09,007 [11336] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-24 12:40:09,029 [11336] INFO     reconfRoute: Routing switching process is starting 
+2019-08-24 12:40:09,047 [11336] INFO     reconfRoute: Wavelength converter placement 
+2019-08-24 12:40:09,057 [11336] INFO     reconfRoute: Routing generation process is starting 
+2019-08-24 12:40:09,104 [11336] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-24 12:40:09,117 [11336] INFO     reconfRoute: Routing switching process is starting 
+2019-08-24 12:40:09,134 [11336] INFO     __main__: Route reconfiguration completed successfully switching process is starting 
+2019-08-24 14:27:07,578 [7852] INFO     __main__: Simulations parameters checking process starting
+2019-08-24 14:27:07,580 [7852] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-24 14:27:07,594 [7852] INFO     __main__: Cycle of Simulations starting
+2019-08-24 14:27:08,195 [7852] INFO     reconfRoute: Topology was created
+2019-08-24 14:27:08,197 [7852] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-24 14:27:08,208 [7852] INFO     reconfRoute: Simulation 0
+2019-08-24 14:27:08,217 [7852] INFO     reconfRoute: Wavelength converter placement 
+2019-08-24 14:27:08,229 [7852] INFO     reconfRoute: Routing generation process is starting 
+2019-08-24 14:27:08,282 [7852] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-24 14:27:08,314 [7852] INFO     reconfRoute: Routing switching process is starting 
+2019-08-24 14:27:08,325 [7852] INFO     reconfRoute: Wavelength converter placement 
+2019-08-24 14:27:08,335 [7852] INFO     reconfRoute: Routing generation process is starting 
+2019-08-24 14:27:08,381 [7852] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-24 14:27:08,415 [7852] INFO     reconfRoute: Routing switching process is starting 
+2019-08-24 14:27:08,455 [7852] INFO     reconfRoute: Wavelength converter placement 
+2019-08-24 14:27:08,472 [7852] INFO     reconfRoute: Routing generation process is starting 
+2019-08-24 14:27:08,513 [7852] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-24 14:27:08,538 [7852] INFO     reconfRoute: Routing switching process is starting 
+2019-08-24 14:27:08,558 [7852] INFO     __main__: Route reconfiguration completed successfully switching process is starting 
+2019-08-24 18:19:46,037 [2672] INFO     __main__: Simulations parameters checking process starting
+2019-08-24 18:19:46,039 [2672] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-24 18:19:46,048 [2672] INFO     __main__: Cycle of Simulations starting
+2019-08-24 18:19:46,961 [2672] INFO     reconfRoute: Topology was created
+2019-08-24 18:19:46,962 [2672] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-24 18:19:46,973 [2672] INFO     reconfRoute: Simulation 0
+2019-08-24 18:19:46,985 [2672] INFO     reconfRoute: Wavelength converter placement 
+2019-08-24 18:19:47,006 [2672] INFO     reconfRoute: Routing generation process is starting 
+2019-08-24 18:19:47,092 [2672] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-24 18:19:47,137 [2672] INFO     reconfRoute: Routing switching process is starting 
+2019-08-24 18:19:47,180 [2672] INFO     reconfRoute: Wavelength converter placement 
+2019-08-24 18:19:47,194 [2672] INFO     reconfRoute: Routing generation process is starting 
+2019-08-24 18:19:47,223 [2672] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-24 18:19:47,240 [2672] INFO     reconfRoute: Routing switching process is starting 
+2019-08-24 18:19:47,253 [2672] INFO     reconfRoute: Wavelength converter placement 
+2019-08-24 18:19:47,264 [2672] INFO     reconfRoute: Routing generation process is starting 
+2019-08-24 18:19:47,299 [2672] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-24 18:19:47,328 [2672] INFO     reconfRoute: Routing switching process is starting 
+2019-08-24 18:19:47,341 [2672] INFO     __main__: Route reconfiguration completed successfully switching process is starting 
+2019-08-24 18:28:32,081 [10672] INFO     __main__: Simulations parameters checking process starting
+2019-08-24 18:28:32,084 [10672] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-24 18:28:32,094 [10672] INFO     __main__: Cycle of Simulations starting
+2019-08-24 18:28:32,484 [10672] INFO     reconfRoute: Topology was created
+2019-08-24 18:28:32,485 [10672] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-24 18:28:32,501 [10672] INFO     reconfRoute: Simulation 0
+2019-08-24 18:28:32,518 [10672] INFO     reconfRoute: Wavelength converter placement 
+2019-08-24 18:28:32,547 [10672] INFO     reconfRoute: Routing generation process is starting 
+2019-08-24 18:28:32,606 [10672] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-24 18:28:32,673 [10672] INFO     reconfRoute: Routing switching process is starting 
+2019-08-24 20:27:33,369 [3164] INFO     __main__: Simulations parameters checking process starting
+2019-08-24 20:27:33,371 [3164] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-24 20:27:33,386 [3164] INFO     __main__: Cycle of Simulations starting
+2019-08-24 20:27:35,163 [3164] INFO     reconfRoute: Topology was created
+2019-08-24 20:27:35,176 [3164] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-24 20:27:35,194 [3164] INFO     reconfRoute: Simulation 0
+2019-08-24 20:27:35,218 [3164] INFO     reconfRoute: Wavelength converter placement 
+2019-08-24 20:27:35,247 [3164] INFO     reconfRoute: Routing generation process is starting 
+2019-08-24 20:27:35,464 [3164] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-24 20:27:35,558 [3164] INFO     reconfRoute: Routing switching process is starting 
+2019-08-24 20:27:35,590 [3164] INFO     reconfRoute: Wavelength converter placement 
+2019-08-24 20:27:35,608 [3164] INFO     reconfRoute: Routing generation process is starting 
+2019-08-24 20:27:35,745 [3164] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-24 20:27:35,748 [3164] INFO     reconfRoute: Routing switching process is starting 
+2019-08-24 20:27:35,765 [3164] INFO     reconfRoute: Wavelength converter placement 
+2019-08-24 20:27:35,780 [3164] INFO     reconfRoute: Routing generation process is starting 
+2019-08-24 20:27:35,819 [3164] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-24 20:27:35,853 [3164] INFO     reconfRoute: Routing switching process is starting 
+2019-08-24 20:27:35,901 [3164] INFO     __main__: Route reconfiguration completed successfully switching process is starting 
+2019-08-25 01:48:36,603 [10904] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 01:48:36,620 [10904] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 01:48:36,645 [10904] INFO     __main__: Cycle of Simulations starting
+2019-08-25 01:48:39,572 [10904] INFO     reconfRoute: Topology was created
+2019-08-25 01:48:39,596 [10904] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 01:48:39,754 [10904] INFO     reconfRoute: Simulation 0
+2019-08-25 01:48:39,813 [10904] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 01:48:40,046 [10904] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 01:48:41,278 [10904] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 01:48:41,409 [10904] INFO     reconfRoute: Routing switching process is starting 
+2019-08-25 01:50:35,313 [4244] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 01:50:35,315 [4244] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 01:50:35,324 [4244] INFO     __main__: Cycle of Simulations starting
+2019-08-25 01:50:36,437 [4244] INFO     reconfRoute: Topology was created
+2019-08-25 01:50:36,442 [4244] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 01:50:36,455 [4244] INFO     reconfRoute: Simulation 0
+2019-08-25 01:50:36,472 [4244] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 01:50:36,491 [4244] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 01:50:36,655 [4244] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 01:50:36,741 [4244] INFO     reconfRoute: Routing switching process is starting 
+2019-08-25 01:52:28,980 [11948] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 01:52:28,993 [11948] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 01:52:29,003 [11948] INFO     __main__: Cycle of Simulations starting
+2019-08-25 01:52:30,103 [11948] INFO     reconfRoute: Topology was created
+2019-08-25 01:52:30,103 [11948] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 01:52:30,116 [11948] INFO     reconfRoute: Simulation 0
+2019-08-25 01:52:30,126 [11948] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 01:52:30,141 [11948] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 01:52:30,325 [11948] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 01:52:30,347 [11948] INFO     reconfRoute: Routing switching process is starting 
+2019-08-25 02:28:27,607 [10972] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 02:28:27,610 [10972] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 02:28:27,625 [10972] INFO     __main__: Cycle of Simulations starting
+2019-08-25 02:28:28,824 [10972] INFO     reconfRoute: Topology was created
+2019-08-25 02:28:28,825 [10972] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 02:28:28,841 [10972] INFO     reconfRoute: Simulation 0
+2019-08-25 02:28:28,856 [10972] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 02:28:28,874 [10972] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 02:28:29,145 [10972] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 02:28:29,223 [10972] INFO     reconfRoute: Routing switching process is starting 
+2019-08-25 09:33:14,237 [904] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 09:33:14,290 [904] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 09:33:14,317 [904] INFO     __main__: Cycle of Simulations starting
+2019-08-25 09:33:19,133 [904] INFO     reconfRoute: Topology was created
+2019-08-25 09:33:19,134 [904] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 09:33:19,204 [904] INFO     reconfRoute: Simulation 0
+2019-08-25 09:33:19,212 [904] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 09:33:19,303 [904] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 09:33:19,577 [904] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 09:34:02,171 [7864] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 09:34:02,173 [7864] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 09:34:02,184 [7864] INFO     __main__: Cycle of Simulations starting
+2019-08-25 09:34:02,543 [7864] INFO     reconfRoute: Topology was created
+2019-08-25 09:34:02,553 [7864] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 09:34:02,585 [7864] INFO     reconfRoute: Simulation 0
+2019-08-25 09:34:02,638 [7864] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 09:34:02,666 [7864] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 09:34:02,819 [7864] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 17:11:09,396 [880] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 17:11:09,437 [880] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 17:11:09,481 [880] INFO     __main__: Cycle of Simulations starting
+2019-08-25 17:11:17,386 [880] INFO     reconfRoute: Topology was created
+2019-08-25 17:11:17,387 [880] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 17:11:17,454 [880] INFO     reconfRoute: Simulation 0
+2019-08-25 17:11:17,465 [880] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 17:11:17,697 [880] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 17:11:18,080 [880] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 19:55:59,221 [4240] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 19:55:59,235 [4240] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 19:55:59,308 [4240] INFO     __main__: Cycle of Simulations starting
+2019-08-25 19:56:05,522 [4240] INFO     reconfRoute: Topology was created
+2019-08-25 19:56:05,522 [4240] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 19:56:05,531 [4240] INFO     reconfRoute: Simulation 0
+2019-08-25 19:56:05,539 [4240] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 19:56:05,550 [4240] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 19:56:06,026 [4240] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 19:56:33,508 [5280] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 19:56:33,511 [5280] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 19:56:33,519 [5280] INFO     __main__: Cycle of Simulations starting
+2019-08-25 19:56:33,817 [5280] INFO     reconfRoute: Topology was created
+2019-08-25 19:56:33,818 [5280] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 19:56:33,832 [5280] INFO     reconfRoute: Simulation 0
+2019-08-25 19:56:33,844 [5280] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 19:56:33,858 [5280] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 19:56:33,904 [5280] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 20:04:04,570 [8180] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 20:04:04,572 [8180] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 20:04:04,583 [8180] INFO     __main__: Cycle of Simulations starting
+2019-08-25 20:04:05,222 [8180] INFO     reconfRoute: Topology was created
+2019-08-25 20:04:05,223 [8180] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 20:04:05,234 [8180] INFO     reconfRoute: Simulation 0
+2019-08-25 20:04:05,244 [8180] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 20:04:05,255 [8180] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 20:04:05,311 [8180] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 20:04:41,359 [10216] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 20:04:41,362 [10216] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 20:04:41,371 [10216] INFO     __main__: Cycle of Simulations starting
+2019-08-25 20:04:43,292 [10216] INFO     reconfRoute: Topology was created
+2019-08-25 20:04:43,296 [10216] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 20:04:43,312 [10216] INFO     reconfRoute: Simulation 0
+2019-08-25 20:04:43,326 [10216] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 20:04:43,342 [10216] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 20:04:43,384 [10216] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 20:28:01,290 [6664] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 20:28:01,292 [6664] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 20:28:01,301 [6664] INFO     __main__: Cycle of Simulations starting
+2019-08-25 20:28:03,350 [6664] INFO     reconfRoute: Topology was created
+2019-08-25 20:28:03,356 [6664] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 20:28:03,371 [6664] INFO     reconfRoute: Simulation 0
+2019-08-25 20:28:03,397 [6664] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 20:28:03,419 [6664] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 20:28:03,513 [6664] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 20:29:56,617 [7516] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 20:29:56,623 [7516] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 20:29:56,639 [7516] INFO     __main__: Cycle of Simulations starting
+2019-08-25 20:29:57,035 [7516] INFO     reconfRoute: Topology was created
+2019-08-25 20:29:57,035 [7516] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 20:29:57,045 [7516] INFO     reconfRoute: Simulation 0
+2019-08-25 20:29:57,054 [7516] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 20:29:57,065 [7516] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 20:29:57,121 [7516] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 20:35:59,437 [5492] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 20:35:59,439 [5492] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 20:35:59,451 [5492] INFO     __main__: Cycle of Simulations starting
+2019-08-25 20:36:01,271 [5492] INFO     reconfRoute: Topology was created
+2019-08-25 20:36:01,273 [5492] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 20:36:01,282 [5492] INFO     reconfRoute: Simulation 0
+2019-08-25 20:36:01,290 [5492] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 20:36:01,307 [5492] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 20:36:01,357 [5492] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 20:42:21,897 [32] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 20:42:21,899 [32] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 20:42:21,908 [32] INFO     __main__: Cycle of Simulations starting
+2019-08-25 20:42:22,191 [32] INFO     reconfRoute: Topology was created
+2019-08-25 20:42:22,193 [32] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 20:42:22,203 [32] INFO     reconfRoute: Simulation 0
+2019-08-25 20:42:22,213 [32] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 20:42:22,225 [32] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 20:42:22,266 [32] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 20:44:42,421 [9092] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 20:44:42,424 [9092] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 20:44:42,432 [9092] INFO     __main__: Cycle of Simulations starting
+2019-08-25 20:44:42,708 [9092] INFO     reconfRoute: Topology was created
+2019-08-25 20:44:42,709 [9092] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 20:44:42,720 [9092] INFO     reconfRoute: Simulation 0
+2019-08-25 20:44:42,731 [9092] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 20:44:42,742 [9092] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 20:44:42,815 [9092] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 20:57:46,699 [6500] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 20:57:46,728 [6500] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 20:57:46,739 [6500] INFO     __main__: Cycle of Simulations starting
+2019-08-25 20:57:47,018 [6500] INFO     reconfRoute: Topology was created
+2019-08-25 20:57:47,019 [6500] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 20:57:47,030 [6500] INFO     reconfRoute: Simulation 0
+2019-08-25 20:57:47,042 [6500] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 20:57:47,055 [6500] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 20:57:47,101 [6500] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 20:58:35,297 [9484] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 20:58:35,299 [9484] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 20:58:35,309 [9484] INFO     __main__: Cycle of Simulations starting
+2019-08-25 20:58:35,577 [9484] INFO     reconfRoute: Topology was created
+2019-08-25 20:58:35,578 [9484] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 20:58:35,589 [9484] INFO     reconfRoute: Simulation 0
+2019-08-25 20:58:35,599 [9484] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 20:58:35,611 [9484] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 20:58:35,656 [9484] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 20:59:36,931 [4640] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 20:59:36,933 [4640] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 20:59:36,944 [4640] INFO     __main__: Cycle of Simulations starting
+2019-08-25 20:59:37,175 [4640] INFO     reconfRoute: Topology was created
+2019-08-25 20:59:37,176 [4640] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 20:59:37,184 [4640] INFO     reconfRoute: Simulation 0
+2019-08-25 20:59:37,193 [4640] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 20:59:37,203 [4640] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 20:59:37,294 [4640] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 21:00:54,027 [4732] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 21:00:54,030 [4732] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 21:00:54,040 [4732] INFO     __main__: Cycle of Simulations starting
+2019-08-25 21:00:54,299 [4732] INFO     reconfRoute: Topology was created
+2019-08-25 21:00:54,301 [4732] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 21:00:54,314 [4732] INFO     reconfRoute: Simulation 0
+2019-08-25 21:00:54,325 [4732] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 21:00:54,338 [4732] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 21:00:54,423 [4732] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 21:01:22,770 [3272] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 21:01:22,773 [3272] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 21:01:22,783 [3272] INFO     __main__: Cycle of Simulations starting
+2019-08-25 21:01:23,063 [3272] INFO     reconfRoute: Topology was created
+2019-08-25 21:01:23,064 [3272] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 21:01:23,077 [3272] INFO     reconfRoute: Simulation 0
+2019-08-25 21:01:23,089 [3272] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 21:01:23,104 [3272] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 21:01:23,196 [3272] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 21:01:50,997 [3800] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 21:01:50,999 [3800] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 21:01:51,010 [3800] INFO     __main__: Cycle of Simulations starting
+2019-08-25 21:01:51,298 [3800] INFO     reconfRoute: Topology was created
+2019-08-25 21:01:51,299 [3800] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 21:01:51,311 [3800] INFO     reconfRoute: Simulation 0
+2019-08-25 21:01:51,322 [3800] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 21:01:51,333 [3800] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 21:01:51,415 [3800] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 21:05:59,869 [5108] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 21:05:59,872 [5108] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 21:05:59,882 [5108] INFO     __main__: Cycle of Simulations starting
+2019-08-25 21:06:00,144 [5108] INFO     reconfRoute: Topology was created
+2019-08-25 21:06:00,145 [5108] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 21:06:00,157 [5108] INFO     reconfRoute: Simulation 0
+2019-08-25 21:06:00,167 [5108] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 21:06:00,182 [5108] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 21:06:00,275 [5108] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 21:07:06,262 [2544] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 21:07:06,265 [2544] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 21:07:06,275 [2544] INFO     __main__: Cycle of Simulations starting
+2019-08-25 21:07:06,527 [2544] INFO     reconfRoute: Topology was created
+2019-08-25 21:07:06,528 [2544] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 21:07:06,540 [2544] INFO     reconfRoute: Simulation 0
+2019-08-25 21:07:06,549 [2544] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 21:07:06,561 [2544] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 21:07:06,648 [2544] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 21:07:06,682 [2544] INFO     reconfRoute: Routing switching process is starting 
+2019-08-25 22:26:02,168 [9740] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 22:26:02,193 [9740] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 22:26:02,250 [9740] INFO     __main__: Cycle of Simulations starting
+2019-08-25 22:26:06,161 [9740] INFO     reconfRoute: Topology was created
+2019-08-25 22:26:06,162 [9740] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 22:26:06,174 [9740] INFO     reconfRoute: Simulation 0
+2019-08-25 22:26:06,185 [9740] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 22:26:06,317 [9740] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 22:26:06,609 [9740] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 22:29:39,050 [10760] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 22:29:39,052 [10760] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 22:29:39,063 [10760] INFO     __main__: Cycle of Simulations starting
+2019-08-25 22:29:40,711 [10760] INFO     reconfRoute: Topology was created
+2019-08-25 22:29:40,712 [10760] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 22:29:40,734 [10760] INFO     reconfRoute: Simulation 0
+2019-08-25 22:29:40,751 [10760] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 22:29:40,773 [10760] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 22:29:40,906 [10760] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 22:30:51,984 [3596] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 22:30:51,986 [3596] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 22:30:52,000 [3596] INFO     __main__: Cycle of Simulations starting
+2019-08-25 22:30:53,662 [3596] INFO     reconfRoute: Topology was created
+2019-08-25 22:30:53,663 [3596] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 22:30:53,683 [3596] INFO     reconfRoute: Simulation 0
+2019-08-25 22:30:53,702 [3596] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 22:30:53,724 [3596] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 22:30:53,857 [3596] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 22:42:14,377 [2088] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 22:42:14,380 [2088] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 22:42:14,394 [2088] INFO     __main__: Cycle of Simulations starting
+2019-08-25 22:42:14,699 [2088] INFO     reconfRoute: Topology was created
+2019-08-25 22:42:14,700 [2088] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 22:42:14,715 [2088] INFO     reconfRoute: Simulation 0
+2019-08-25 22:42:14,731 [2088] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 22:42:14,744 [2088] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 22:42:14,973 [2088] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 22:44:11,567 [9896] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 22:44:11,569 [9896] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 22:44:11,579 [9896] INFO     __main__: Cycle of Simulations starting
+2019-08-25 22:44:11,833 [9896] INFO     reconfRoute: Topology was created
+2019-08-25 22:44:11,834 [9896] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 22:44:11,847 [9896] INFO     reconfRoute: Simulation 0
+2019-08-25 22:44:11,857 [9896] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 22:44:11,871 [9896] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 22:44:11,955 [9896] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 23:12:32,133 [9656] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 23:12:32,136 [9656] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 23:12:32,147 [9656] INFO     __main__: Cycle of Simulations starting
+2019-08-25 23:12:33,794 [9656] INFO     reconfRoute: Topology was created
+2019-08-25 23:12:33,795 [9656] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 23:12:33,806 [9656] INFO     reconfRoute: Simulation 0
+2019-08-25 23:12:33,816 [9656] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 23:12:33,828 [9656] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 23:12:33,914 [9656] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 23:15:33,960 [10020] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 23:15:33,962 [10020] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 23:15:33,972 [10020] INFO     __main__: Cycle of Simulations starting
+2019-08-25 23:15:34,242 [10020] INFO     reconfRoute: Topology was created
+2019-08-25 23:15:34,243 [10020] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 23:15:34,253 [10020] INFO     reconfRoute: Simulation 0
+2019-08-25 23:15:34,265 [10020] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 23:15:34,276 [10020] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 23:15:34,358 [10020] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 23:23:47,116 [10332] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 23:23:47,118 [10332] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 23:23:47,129 [10332] INFO     __main__: Cycle of Simulations starting
+2019-08-25 23:23:48,695 [10332] INFO     reconfRoute: Topology was created
+2019-08-25 23:23:48,696 [10332] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 23:23:48,708 [10332] INFO     reconfRoute: Simulation 0
+2019-08-25 23:23:48,720 [10332] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 23:23:48,732 [10332] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 23:23:48,827 [10332] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 23:25:57,002 [2128] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 23:25:57,004 [2128] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 23:25:57,019 [2128] INFO     __main__: Cycle of Simulations starting
+2019-08-25 23:25:57,291 [2128] INFO     reconfRoute: Topology was created
+2019-08-25 23:25:57,292 [2128] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 23:25:57,304 [2128] INFO     reconfRoute: Simulation 0
+2019-08-25 23:25:57,316 [2128] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 23:25:57,330 [2128] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 23:25:57,425 [2128] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 23:34:10,745 [5944] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 23:34:10,747 [5944] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 23:34:10,759 [5944] INFO     __main__: Cycle of Simulations starting
+2019-08-25 23:34:19,059 [5944] INFO     reconfRoute: Topology was created
+2019-08-25 23:34:19,060 [5944] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 23:34:19,072 [5944] INFO     reconfRoute: Simulation 0
+2019-08-25 23:34:19,083 [5944] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 23:34:19,097 [5944] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 23:34:19,192 [5944] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 23:37:07,313 [5824] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 23:37:07,316 [5824] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 23:37:07,327 [5824] INFO     __main__: Cycle of Simulations starting
+2019-08-25 23:37:08,851 [5824] INFO     reconfRoute: Topology was created
+2019-08-25 23:37:08,851 [5824] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 23:37:08,865 [5824] INFO     reconfRoute: Simulation 0
+2019-08-25 23:37:08,879 [5824] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 23:37:08,896 [5824] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 23:37:08,989 [5824] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 23:40:26,250 [10248] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 23:40:26,253 [10248] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 23:40:26,264 [10248] INFO     __main__: Cycle of Simulations starting
+2019-08-25 23:40:32,608 [10248] INFO     reconfRoute: Topology was created
+2019-08-25 23:40:32,609 [10248] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 23:40:32,621 [10248] INFO     reconfRoute: Simulation 0
+2019-08-25 23:40:32,632 [10248] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 23:40:32,646 [10248] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 23:40:32,732 [10248] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 23:44:43,979 [10384] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 23:44:43,982 [10384] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 23:44:43,993 [10384] INFO     __main__: Cycle of Simulations starting
+2019-08-25 23:44:45,648 [10384] INFO     reconfRoute: Topology was created
+2019-08-25 23:44:45,649 [10384] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 23:44:45,661 [10384] INFO     reconfRoute: Simulation 0
+2019-08-25 23:44:45,673 [10384] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 23:44:45,691 [10384] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 23:44:45,821 [10384] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 23:49:34,623 [10060] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 23:49:34,626 [10060] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 23:49:34,635 [10060] INFO     __main__: Cycle of Simulations starting
+2019-08-25 23:49:34,888 [10060] INFO     reconfRoute: Topology was created
+2019-08-25 23:49:34,889 [10060] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 23:49:34,900 [10060] INFO     reconfRoute: Simulation 0
+2019-08-25 23:49:34,909 [10060] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 23:49:34,920 [10060] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 23:49:35,006 [10060] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 23:51:09,377 [5512] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 23:51:09,380 [5512] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 23:51:09,393 [5512] INFO     __main__: Cycle of Simulations starting
+2019-08-25 23:51:09,648 [5512] INFO     reconfRoute: Topology was created
+2019-08-25 23:51:09,649 [5512] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 23:51:09,662 [5512] INFO     reconfRoute: Simulation 0
+2019-08-25 23:51:09,675 [5512] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 23:51:09,694 [5512] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 23:51:09,800 [5512] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 23:53:16,179 [9684] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 23:53:16,182 [9684] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 23:53:16,228 [9684] INFO     __main__: Cycle of Simulations starting
+2019-08-25 23:53:16,483 [9684] INFO     reconfRoute: Topology was created
+2019-08-25 23:53:16,484 [9684] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 23:53:16,497 [9684] INFO     reconfRoute: Simulation 0
+2019-08-25 23:53:16,509 [9684] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 23:53:16,525 [9684] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 23:53:16,626 [9684] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 23:53:55,972 [2576] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 23:53:55,974 [2576] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 23:53:55,985 [2576] INFO     __main__: Cycle of Simulations starting
+2019-08-25 23:53:56,242 [2576] INFO     reconfRoute: Topology was created
+2019-08-25 23:53:56,244 [2576] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 23:53:56,257 [2576] INFO     reconfRoute: Simulation 0
+2019-08-25 23:53:56,268 [2576] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 23:53:56,279 [2576] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 23:53:56,363 [2576] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-25 23:57:17,256 [6064] INFO     __main__: Simulations parameters checking process starting
+2019-08-25 23:57:17,260 [6064] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-25 23:57:17,271 [6064] INFO     __main__: Cycle of Simulations starting
+2019-08-25 23:57:18,961 [6064] INFO     reconfRoute: Topology was created
+2019-08-25 23:57:18,962 [6064] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-25 23:57:18,973 [6064] INFO     reconfRoute: Simulation 0
+2019-08-25 23:57:18,986 [6064] INFO     reconfRoute: Wavelength converter placement 
+2019-08-25 23:57:18,999 [6064] INFO     reconfRoute: Routing generation process is starting 
+2019-08-25 23:57:19,089 [6064] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-26 00:00:27,274 [6452] INFO     __main__: Simulations parameters checking process starting
+2019-08-26 00:00:27,277 [6452] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-26 00:00:27,287 [6452] INFO     __main__: Cycle of Simulations starting
+2019-08-26 00:00:28,771 [6452] INFO     reconfRoute: Topology was created
+2019-08-26 00:00:28,771 [6452] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-26 00:00:28,786 [6452] INFO     reconfRoute: Simulation 0
+2019-08-26 00:00:28,803 [6452] INFO     reconfRoute: Wavelength converter placement 
+2019-08-26 00:00:28,825 [6452] INFO     reconfRoute: Routing generation process is starting 
+2019-08-26 00:00:28,971 [6452] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-26 00:18:22,454 [11040] INFO     __main__: Simulations parameters checking process starting
+2019-08-26 00:18:22,457 [11040] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-26 00:18:22,466 [11040] INFO     __main__: Cycle of Simulations starting
+2019-08-26 00:18:24,040 [11040] INFO     reconfRoute: Topology was created
+2019-08-26 00:18:24,042 [11040] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-26 00:18:24,051 [11040] INFO     reconfRoute: Simulation 0
+2019-08-26 00:18:24,063 [11040] INFO     reconfRoute: Wavelength converter placement 
+2019-08-26 00:18:24,075 [11040] INFO     reconfRoute: Routing generation process is starting 
+2019-08-26 00:18:24,161 [11040] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-26 00:21:34,223 [2708] INFO     __main__: Simulations parameters checking process starting
+2019-08-26 00:21:34,226 [2708] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-26 00:21:34,236 [2708] INFO     __main__: Cycle of Simulations starting
+2019-08-26 00:21:35,803 [2708] INFO     reconfRoute: Topology was created
+2019-08-26 00:21:35,804 [2708] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-26 00:21:35,816 [2708] INFO     reconfRoute: Simulation 0
+2019-08-26 00:21:35,826 [2708] INFO     reconfRoute: Wavelength converter placement 
+2019-08-26 00:21:35,842 [2708] INFO     reconfRoute: Routing generation process is starting 
+2019-08-26 00:21:35,933 [2708] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-26 00:22:31,058 [2476] INFO     __main__: Simulations parameters checking process starting
+2019-08-26 00:22:31,060 [2476] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-26 00:22:31,071 [2476] INFO     __main__: Cycle of Simulations starting
+2019-08-26 00:22:31,362 [2476] INFO     reconfRoute: Topology was created
+2019-08-26 00:22:31,363 [2476] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-26 00:22:31,373 [2476] INFO     reconfRoute: Simulation 0
+2019-08-26 00:22:31,386 [2476] INFO     reconfRoute: Wavelength converter placement 
+2019-08-26 00:22:31,402 [2476] INFO     reconfRoute: Routing generation process is starting 
+2019-08-26 00:22:31,493 [2476] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-26 00:30:41,335 [10400] INFO     __main__: Simulations parameters checking process starting
+2019-08-26 00:30:41,337 [10400] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-26 00:30:41,348 [10400] INFO     __main__: Cycle of Simulations starting
+2019-08-26 00:30:45,971 [10400] INFO     reconfRoute: Topology was created
+2019-08-26 00:30:45,972 [10400] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-26 00:30:45,984 [10400] INFO     reconfRoute: Simulation 0
+2019-08-26 00:30:45,996 [10400] INFO     reconfRoute: Wavelength converter placement 
+2019-08-26 00:30:46,014 [10400] INFO     reconfRoute: Routing generation process is starting 
+2019-08-26 00:30:46,101 [10400] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-26 00:39:25,158 [7196] INFO     __main__: Simulations parameters checking process starting
+2019-08-26 00:39:25,161 [7196] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-26 00:39:25,171 [7196] INFO     __main__: Cycle of Simulations starting
+2019-08-26 00:39:26,846 [7196] INFO     reconfRoute: Topology was created
+2019-08-26 00:39:26,847 [7196] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-26 00:39:26,858 [7196] INFO     reconfRoute: Simulation 0
+2019-08-26 00:39:26,868 [7196] INFO     reconfRoute: Wavelength converter placement 
+2019-08-26 00:39:26,883 [7196] INFO     reconfRoute: Routing generation process is starting 
+2019-08-26 00:39:26,974 [7196] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-26 00:50:46,283 [9960] INFO     __main__: Simulations parameters checking process starting
+2019-08-26 00:50:46,285 [9960] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-26 00:50:46,294 [9960] INFO     __main__: Cycle of Simulations starting
+2019-08-26 00:50:54,710 [9960] INFO     reconfRoute: Topology was created
+2019-08-26 00:50:54,711 [9960] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-26 00:50:54,722 [9960] INFO     reconfRoute: Simulation 0
+2019-08-26 00:50:54,733 [9960] INFO     reconfRoute: Wavelength converter placement 
+2019-08-26 00:50:54,746 [9960] INFO     reconfRoute: Routing generation process is starting 
+2019-08-26 00:50:54,826 [9960] INFO     reconfRoute: Routing generation process completed successfully 

@@ -37,6 +37,21 @@ class SwcnTreeReconf:
 
     def initialize(self):
         print("sayHello")
+        T0 = nx.DiGraph()
+        Tz = nx.DiGraph()
+        T0.add_nodes_from([0, 1, 2, 3, 4])
+        T0.add_edges_from([(0, 1), (0, 2), (2, 3), (2, 4)])
+        Tz.add_nodes_from([0, 1, 2, 3, 4, 5])
+        Tz.add_edges_from([(0, 1), (0, 5), (5, 2), (1, 3), (2, 4)])
+        print("Nature de 3:", nsp.is_convergent(T0, Tz, 3))
+        print("Nature de 2:", nsp.is_divergent(T0, Tz, 2))
+        print("enfants de 5 sur Tz", nsp.get_childs(Tz, 5))
+        print("Parent de 4 sur T0", nsp.get_parent(T0, 4)[0])
+        print("Liste des noeuds convergents from 0: ", nsp.get_convergents(T0, Tz, 0))
+        print("Liste des noeuds divergents from 0: ", nsp.get_divergents(T0, Tz, 0))
+        print("Liste des descendants de 5 sur Tz : ", nsp.get_descendants(Tz, 5))
+        print("Liste des ascendants de 2 sur Tz : ", nsp.get_ancestors(Tz, 2))
+        print("Les feuilles", ntp.all_leafs(T0))
         self.root = list(nx.topological_sort(self.current_tree))[0] #or nx.topological_sort(final_tree)
         print(self.root)
         if nsp.is_divergent(self.current_tree,self.final_tree,self.root):

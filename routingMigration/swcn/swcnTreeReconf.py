@@ -5,6 +5,7 @@ import networkx as nx
 import os
 import sys
 from pathlib import Path
+
 sim_dir = os.getcwd()+os.sep+"helper"
 paths = list(sys.path)
 #print("BEFORE", sys.path)
@@ -13,6 +14,7 @@ nsp = __import__("nodeSelectProperty")
 ntp = __import__("nodeTreeProperty")
 #print(nsp)
 sys.path[:] = paths
+
 class SwcnTreeReconf:
     """
     Ecrire
@@ -25,41 +27,125 @@ class SwcnTreeReconf:
         self.my_currdiv_nodes = []
         self.reconf_order = []
         self.root = ""
-        self.initialize()
+        self.criteria_value = {'add_cost': 0,'dure': 0, 'interrupt_dure': 0}
+        self.test1()
+        exit(0)
+        #self._initialize()
 
-    def initialize(self):
+    def _initialize(self):
         print("sayHello")
         self.root = list(nx.topological_sort(self.current_tree))[0] #or nx.topological_sort(final_tree)
-        print(self.root)
         if nsp.is_divergent(self.current_tree,self.final_tree,self.root):
             self.my_currdiv_nodes.append(self.root)
         div = nsp.get_divergents(self.current_tree,self.final_tree,self.root)
         self.my_currdiv_nodes.extend(div)
         self.my_currconv_nodes = nsp.get_convergents(self.current_tree,self.final_tree,self.root)
-    
+
+    #ALGO 5
     def run(self):
-        print("migrated")
+        print(" begin migration")
         print("div_list",self.my_currdiv_nodes)
         print("conv_list",self.my_currconv_nodes)
         if len(self.my_currdiv_nodes) != 0:
+            # Selection et reconfiguration sequentielle de paire de catégorie 1
+            print('Je cherche paire de cat 1')
             for node in self.my_currdiv_nodes:
                 while True:
-                    init_subtree,end_subtree = self.select_dis_subtree(node, self.current_tree, self.final_tree)
-                    print("CATE 1", init_subtree, end_subtree)
-                    break # A enlever
+                    init_subtree, end_subtree = self.select_dis_subtree(node, self.current_tree, self.final_tree)
                     if init_subtree == None or end_subtree == None:
-                        #Enlever node de self.my_currdiv_nodes(grace sel.my_currdiv_nodes.remove(node))
+                        #Enlever node de self.my_currdiv_nodes(grace self.my_currdiv_nodes.remove(node))
+                        # Car aucune paire de cat 1 ne peut avoir pour racine ce dernier
+                        self.my_currdiv_nodes.remove(node)
+                        print("Select category 1 retourne rien avec ce noeud",node, init_subtree, end_subtree)
                         break
                     else:
-                        pass
-                        #call reconf_dis_subtree pour mettre à jour self.reconf_order
-                        #Mettre à jour l'arbre courant
-        # verifier si l'arbre courant égale à l'arbre final.
-        # Si oui alors retourner self.reconf_order sinon gérer les catégories 2
-        #Pour ce faire rechercher les noeuds convergents de current_tree 
-        # et construire à partir du plus profond dans l'arbre seg0 puis segz
-        # ensuite call select_shared_subtree puis reconf_shared_subtree
-        
+                        print("CATEGORY 1 GOOD !!!", list(init_subtree.edges()), list(end_subtree.edges()))
+                        #Mettre à jour l'arbre courant(ce que l'on assimile à un appel de reconf_dis_subtree pour mettre à jour self.reconf_order
+                        self.current_tree = self.tree_update(self.current_tree, init_subtree, end_subtree)
+                        # Mettre à jour la valeur courante de chaque critère de performance: A FAIRE ICI
+                        # verified if n is again divergent node . If it is not the case then remove n in unvisited divergent nodes
+                        if not nsp.is_divergent(self.current_tree, self.final_tree, node):
+                            self.my_currdiv_nodes.remove(node)
+                            print("Tu n'es plus divergent :", node)
+                            break
+        # Verified if current_tree == final_tree et mettre fin à l'algo
+        if self._is_end(self.current_tree, self.final_tree):
+            return "FINI" # pour le moment sinon APRES on va retourner la liste des valeurs obtenues pour chaque critere de performance
+        else:
+            # Pas de paire de catégorie 1 possible
+            print("PAS OU PLUS DE PAIRE DE CATEGORIE 1")
+            # Rechercher les paires de catégories 2 et faire la reconfiguration de ses paires de catégories 2
+            # créer la liste des noeuds  dans un ordre decroissant des profondeurs
+            topo_sort_current = reversed(list(nx.topological_sort(self.current_tree)))
+            conv_node = None
+            for n in topo_sort_current:
+                if nsp.is_convergent(self.current_tree, self.final_tree, n):
+                    conv_node = n
+                    break
+            while conv_node != None:
+                init_subtree, end_subtree = self.select_shared_subtree(conv_node, self.current_tree, self.final_tree)
+                if init_subtree != None and end_subtree != None:
+                    print("J'ai ma PAIRE DE CATEGORIE 2")
+                    # Mettre à jour l'arbre courant
+                    self.current_tree = self.tree_update(self.current_tree, init_subtree, end_subtree)
+                    # Mettre à jour la valeur courante de chaque critère de performance: A FAIRE ICI
+                    topo_sort_current = reversed(list(nx.topological_sort(self.current_tree)))
+                    conv_node = None
+                    for n in topo_sort_current:
+                        if nsp.is_convergent(self.current_tree, self.final_tree, n):
+                            conv_node = n
+                            break
+                # CE ELSE DOIT ETRE ENLEVE SI TOUT VA BIEN CAR C'EST PAS NORMAL
+                else:
+                    print("TIENS C'EST BIZZARE JE NE TROUVE PAS CAT 2")
+            if self._is_end(self.current_tree, self.final_tree):
+                return "FINI"  # pour le moment sinon APRES on va retourner la liste des valeurs des criteres de performances
+            else:
+                print("IL Y A PROBLEME")
+            # retourner Reconf_order lorsque current_tree = final_tree
+        print(" end  migration")
+
+    def _is_end(self, current = nx.DiGraph(), final = nx.DiGraph()):
+
+        if len((set(list(current.edges())).difference(set(list(final.edges()))))) == len((set(list(final.edges())).difference(set(list(current.edges()))))) == 0:
+            print("Fin Reconfiguration")
+            return True
+        else:
+            print("PAS ENCORE LA FIN !!!")
+            return False
+
+    def tree_update(self, current=nx.DiGraph(), init_subtree=nx.DiGraph(), end_subtree=nx.DiGraph()):
+        """
+        current_tree = current_tree - init_subtree - end_subtree
+        :param current:
+        :param init_subtree:
+        :param end_subtree:
+        :return:
+        """
+        curr = current.copy()
+        init_edges = list(init_subtree.edges())
+        print("AVANT enlevement", list(curr.edges()))
+        curr.remove_edges_from(init_edges)   # Enlever les liens de l'ancien sous-arbres  à l'arbre courant
+        print("APRES enlevement", list(curr.edges()))
+        #for n in end_nodes:
+            #curr.add_node(n, node_data=end_subtree.nodes[n]['node_data']) # Ajouter les noeuds du nouveau sous-arbre à l'arbre courant
+           # curr.add_node(n)
+        end_edges = list(end_subtree.edges())
+        for e in end_edges:
+            #curr.add_edges_from([(e[0], e[1])], edge_data=end_subtree.edges[e]['edge_data']) # Ajouter les noeuds du nouveau sous-arbre à l'arbre courant
+            curr.add_edges_from([(e[0], e[1])])
+        node_to_delete = []
+        for n in list(curr.nodes()):
+            in_edge = False
+            for e in list(curr.edges()):
+                if e[0] == n or e[1]== n:
+                    in_edge = True
+                    break
+            if not in_edge:
+                node_to_delete.append(n)
+        curr.remove_nodes_from(node_to_delete)
+        print("curr final", list(curr.edges()))
+        return curr
         
     def select_dis_subtree(self, div_node, init_tree = nx.DiGraph(),end_tree=nx.DiGraph()):
         """
@@ -78,8 +164,9 @@ class SwcnTreeReconf:
         
         print("step 2 begin")
         while len(conv_list) != len(pair_cg_nodes):
-            # premier element de conv_list non prsent dans pair_cg_nodes
+            # premier element de conv_list non présent dans pair_cg_nodes
             n = "0"
+            print("pair_cg_nodes", pair_cg_nodes)
             if len(pair_cg_nodes) == 0:
                 n = conv_list[0]
             else:
@@ -100,7 +187,7 @@ class SwcnTreeReconf:
                 nodes_to_be_deleted.extend(list(del0.union(delz)))
                 for u in nodes_to_be_deleted:
                     conv_list.remove(u)
-
+        print("pair_cg_nodes", pair_cg_nodes)
         print("step 2 end")
 
         print("step 3 begin")
@@ -118,16 +205,20 @@ class SwcnTreeReconf:
         for n in pair_cg_nodes:
             # descendants de n sur t0
             desc_n = set(nsp.get_descendants(init_tree, n))
+            print("desc de n", n, list(desc_n))
             # pair_cg_nodes privé de n
             other_set = set(pair_cg_nodes).difference(set([n]))
-            #ensemble des descendants de n n'appartenant pas à other_set
-            temp_set =desc_n.difference(other_set)
+            print("other_set de n", n, list(other_set))
+            #ensemble des descendants appartenant  à other_set
+            temp_set =desc_n.intersection(other_set)
+            print("temp_set", n, list(temp_set))
             if len(temp_set) == 0:
                 D0.append(n)
+        print("D0", D0)
         st0 = ntp.subtree(init_tree, div_node,D0)   
         
         print("step 4 end")
-        
+
         #new subtree
         print('step 5 begin')
         #new subtree
@@ -140,7 +231,7 @@ class SwcnTreeReconf:
             # pair_cg_nodes privé de n
             other_set = set(pair_cg_nodes).difference(set([n]))
             #ensemble des descendants de n n'appartenant pas à other_set
-            temp_set =desc_n.difference(other_set)
+            temp_set =desc_n.intersection(other_set)
             if len(temp_set) == 0:
                 Dn.append(n)
         stn = ntp.subtree(end_tree, div_node,Dn)  
@@ -150,19 +241,14 @@ class SwcnTreeReconf:
         print("Fin algo 1")
         
         return st0,stn
-    
 
-        
-        
-    
     def reconf_dis_subtree(self, init_subtree=nx.DiGraph(),end_subtree=nx.DiGraph()):
         """
     
         Ecrire le commentaire
     
         """
-    
-    
+
     # def select_shared_subtree(self, seg0,segz, init_tree=nx.DiGraph(),end_tree=nx.DiGraph()):
     def select_shared_subtree(self,conv_node, init_tree=nx.DiGraph(),end_tree=nx.DiGraph()):
         """
@@ -174,33 +260,64 @@ class SwcnTreeReconf:
         nbsc = "0"
         path0 = nx.shortest_path(init_tree, self.root, conv_node)
         pathz = nx.shortest_path(end_tree, self.root, conv_node)
+        D_pair = []
+        D = ntp.all_leafs(init_tree)
         
-        if len(path0) == 2 or len(pathz)==2 or len(set(path0).intersection(set(pathz)))==0:
+        if len(path0) == 2 or len(pathz) == 2:
             nbsc = self.root
+            if len(path0) == 2:
+                if not conv_node in D:
+                    D_pair = [d for d in D if len(set(nsp.get_ancestors(init_tree, d)).intersection(set([conv_node]))) > 0]
+                else:
+                    D_pair = [conv_node]
+            elif len(pathz) == 2:
+                D_pair = [d for d in D if len(set(nsp.get_ancestors(init_tree, d)).intersection(set(path0[1:]))) > 0]
         else:
             ancestors0 = []
             ancestorsz = []
-            #ancestors of conv_node on T0
+            #ancestors of conv_node on T0 except the root of T0
             ancestors0=  reversed(path0[1:len(path0)-1]) # du plus proche de conv_node au plus distant
-            #ancestors of conv_node on Tz
+            #ancestors of conv_node on Tz except the root of T0
             ancestorsz=  reversed(pathz[1:len(pathz)-1])
-            # Garder ceux qui sont non divergents et qui ont sont dans Vc
+            # Garder les ancetres sur chaque arbre qui sont non divergents et qui ont sont dans Vc
             is_wcn0 =nx.get_node_attributes(init_tree,'wcn')
             is_wcnz =nx.get_node_attributes(init_tree,'wcn')
             partial_ancestors0 = [a for a in ancestors0 if not nsp.is_divergent(init_tree,end_tree,a) and is_wcn0[a]==True]
-            is_wcnz =nx.get_node_attributes(init_tree,'wcn')
+            is_wcnz =nx.get_node_attributes(end_tree,'wcn')
             partial_ancestorsz = [a for a in ancestorsz if not nsp.is_divergent(init_tree,end_tree,a) and is_wcnz[a]==True]
-            if len(partial_ancestors0) !=0 and len(partial_ancestorsz) != 0 and len(set(partial_ancestors0).intersection(set(partial_ancestorsz)))!=0:
+            if len(partial_ancestors0) != 0 and len(partial_ancestorsz) != 0 and len(set(partial_ancestors0).intersection(set(partial_ancestorsz)))!=0:
+                find = False
+                #Pour chaque  ancetre non divergent(appartenant à Vc)  de conv_node sur Tz faire
                 for n in partial_ancestorsz:
-                    pass
-                    
+                    #verifier s'il est ancêtre également sur l'ancien arbre(donc ancêtre commun non divergent ayant la propriété de conversion)
+                    if n in partial_ancestors0:
+                        # Alors vérifier que ce noeud va couvrir le même sous-ensemble de destinations
+                        temp_path0 = nx.shortest_path(init_tree, n, conv_node)
+                        #sous-ensemble de D ayant un ancêtre sur le segment n->conv_node de T0
+                        D_old = [d for d in D if len(set(nsp.get_ancestors(init_tree, d)).intersection(set(temp_path0))) > 0]
+                        temp_pathz = nx.shortest_path(end_tree, n, conv_node)
+                        # sous-ensemble de D ayant un ancêtre sur le segment n->conv_node de Tz
+                        D_new = [d for d in D if len(set(nsp.get_ancestors(end_tree, d)).intersection(set(temp_pathz))) > 0]
+                        # si c'est deux sous-ensemble sont identitques alors on tient la bonne racine de notre paire de categorie 2
+                        # à créer et cette devra couvrir le m^me ensemble de destination D_pair = D_old = D_new
+                        if len(D_old) != 0 and len(D_new) != 0 and D_old == D_new:
+                            nbsc = n
+                            find = True
+                            D_pair = D_old
+                            break
+                if not find:
+                    # Si une racine ne respecte pas les critiques alors prendre la racine de (T0,Tz) comme racine
+                    nbsc = self.root
+                    # et prendre comme ensemble de destinations:
+                    # les elements de D ayant un ancêtre sur le segment root->conv_node hormis root
+                    D_pair = [d for d in D if len(set(nsp.get_ancestors(init_tree, d)).intersection(set(path0[1:]))) > 0]
             else:
+                # Si une racine ne respecte pas les critiques alors prendre la racine de (T0,Tz) comme racine
                 nbsc = self.root
-
-            
+                # et prendre comme ensemble de destinations:
+                # les elements de D ayant un ancêtre sur le segment root->conv_node hormis root
+                D_pair = [d for d in D if len(set(nsp.get_ancestors(init_tree, d)).intersection(set(path0[1:]))) > 0]
         print("step 1 end")
-        
-        
         
     def reconf_shared_subtree(self, init_subtree=nx.DiGraph(),end_subtree=nx.DiGraph()):
         """
@@ -259,3 +376,46 @@ class SwcnTreeReconf:
                     verdict = True
                     print("condition 2 verified")
         return verdict
+
+    def test1(self):
+        T0 = nx.DiGraph()
+        Tz = nx.DiGraph()
+        #premier cas : aucune condition d'interruption verifiée
+        T0.add_nodes_from(['s', 'a', 'b', 'd', 'e', 'f', 'g', 'h'])
+        T0.add_edges_from([('s', 'a'), ('a', 'b'), ('b', 'd'), ('d', 'e'), ('d','f'),('e','g'), ('f','h')])
+        Tz.add_nodes_from(['s', 'a', 'k', 'e', 'f', 'g', 'h'])
+        Tz.add_edges_from([('s', 'a'), ('a', 'k'), ('k', 'f'), ('f', 'e'), ('e', 'g'), ('f', 'h')])
+        # deuxième cas : condition 1 d'interruption verifiée
+        #T0.add_nodes_from(['s', 'a', 'b', 'd', 'e', 'f', 'g', 'h', 'y'])
+        #T0.add_edges_from([('s', 'a'), ('a', 'b'), ('b', 'd'), ('d', 'e'), ('d', 'f'), ('e', 'g'), ('f', 'h'), ('b', 'y')])
+        #Tz.add_nodes_from(['s', 'a', 'k', 'e', 'f', 'g', 'h', 'y'])
+        #Tz.add_edges_from([('s', 'a'), ('a', 'k'), ('k', 'f'), ('f', 'e'), ('e', 'g'), ('f', 'h'), ('s', 'y')])
+        # troisième  cas : condition 2 d'interruption verifiée
+        #T0.add_nodes_from(['s', 'a', 'b', 'd', 'e', 'f', 'g', 'h'])
+        #T0.add_edges_from([('s', 'a'), ('a', 'b'), ('b', 'd'), ('d', 'e'), ('d','f'),('e','g'), ('f','h')])
+        #Tz.add_nodes_from(['s', 'a', 'k', 'e', 'f', 'g', 'h', 'd'])
+        #Tz.add_edges_from([('s', 'a'), ('a', 'k'), ('k', 'f'), ('f', 'e'), ('e', 'g'), ('f', 'h'),('s', 'd')])
+        self.root = 's'
+        self.current_tree = T0.copy()
+        self.final_tree = Tz.copy()
+        nodes = nsp.get_divergents(self.current_tree, self.final_tree, self.root)
+        #print("DIV_NODES", nodes)
+        div = 'a'
+        #for div in nodes:
+        init_subtree, end_subtree = self.select_dis_subtree(div, self.current_tree, self.final_tree)
+        if init_subtree != None and end_subtree != None:
+            self.current_tree = self.tree_update(self.current_tree, init_subtree, end_subtree)
+            print("TEST DE TREE UPDATE")
+            print(list(self.current_tree.edges()))
+            print(list(self.current_tree.nodes(data=True)))
+            print(list(self.final_tree.edges()))
+            print(list(self.final_tree.nodes(data=True)))
+            if self._is_end(self.current_tree, self.final_tree):
+                print("c'est fini!!!")
+            else:
+                print("ca bug un peu!!!")
+        else:
+            print("c'est pas fini!!! CATE 2 NOW")
+        #print(set(list(init_subtree.edges())).difference(set(list(end_subtree.edges()))))
+    def test2(self):
+        pass
