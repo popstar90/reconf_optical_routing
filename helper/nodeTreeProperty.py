@@ -37,8 +37,8 @@ def subtree(T=nx.DiGraph(), src="", D=[] ):
     """
     tcopy = T.copy()
     w = tcopy.graph
-    #mytree = nx.DiGraph(wavelength=w['wavelength'])  # L'arbre à construire) A remetrre à la fin de mes tests
-    mytree = nx.DiGraph()  # L'arbre à construire) # aa enlever à la fin de mes tests
+    mytree = nx.DiGraph(wavelength=w['wavelength'])  # L'arbre à construire) A remetrre à la fin de mes tests
+    #mytree = nx.DiGraph()  # L'arbre à construire) # aa enlever à la fin de mes tests
     nodes_set = set([src]+D)
     edges_set = set()
     for i in D:
@@ -52,14 +52,14 @@ def subtree(T=nx.DiGraph(), src="", D=[] ):
     print(edges_list)
     mytree.add_nodes_from(nodes_list)
     mytree.add_edges_from(edges_list)
-    #for n in mytree.nodes():
-        #if n in T.nodes():
-            #mytree.nodes[n]['node_data'] = T.nodes[n]['node_data']
-    #for e in edges_list:
-        #try:
-            #mytree[e[0]][e[1]]['edge_data'] = T[e[0]][e[1]]['edge_data']
-        #except:
-            #print("ERREUR!!!")
+    for n in mytree.nodes():
+        if n in T.nodes():
+            mytree.nodes[n]['node_data'] = T.nodes[n]['node_data']
+    for e in edges_list:
+        try:
+            mytree[e[0]][e[1]]['edge_data'] = T[e[0]][e[1]]['edge_data']
+        except:
+            print("ERREUR!!!")
     print("Nodes", mytree.nodes(data=True))
     print('Edges', mytree.edges(data=True))
     #print('Wavelength', mytree.graph)

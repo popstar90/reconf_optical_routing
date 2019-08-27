@@ -100,13 +100,14 @@ def is_convergent(T0=nx.DiGraph(),Tz=nx.DiGraph(),node="0"):
     bool
         True s'il est convergent et False dans le cas contraire
     """
-    
-    parent0 = get_parent(T0,node)
-    parentz = get_parent(Tz,node)
     verdict = False
-    if len(parent0) == len(parentz) == 1:
-        if parent0[0] != parentz[0]:
-            verdict = True
+    pair_root = list(nx.topological_sort(T0))[0]
+    if node in T0.nodes() and node in Tz.nodes() and node != pair_root :
+        parent0 = get_parent(T0,node)
+        parentz = get_parent(Tz,node)
+        if len(parent0) == len(parentz) == 1:
+            if parent0[0] != parentz[0]:
+                verdict = True
     return verdict
 
 def is_divergent(T0=nx.DiGraph(),Tz=nx.DiGraph(),node="0"):
@@ -126,13 +127,14 @@ def is_divergent(T0=nx.DiGraph(),Tz=nx.DiGraph(),node="0"):
         True s'il est divergent et False dans le cas contraire
     """
     verdict = False
-    if not ntp.is_leaf(T0,node) and not ntp.is_leaf(Tz,node):
-        childs0 = get_childs(T0, node)
-        childsz = get_childs(Tz, node)
-        for n in childs0:
-            if n not in childsz:
-                verdict = True
-                break
+    if node in T0.nodes() and  node in Tz.nodes():
+        if not ntp.is_leaf(T0,node) and not ntp.is_leaf(Tz,node):
+            childs0 = get_childs(T0, node)
+            childsz = get_childs(Tz, node)
+            for n in childs0:
+                if n not in childsz:
+                    verdict = True
+                    break
     return verdict
 
 def get_convergents(T0=nx.DiGraph(),Tz=nx.DiGraph(),node="0"):
