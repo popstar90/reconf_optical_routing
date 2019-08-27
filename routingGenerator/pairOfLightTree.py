@@ -93,6 +93,9 @@ class PairOfLightTree:
         # initial_route.nodes[n]['node_data'] = temp_initial_route.nodes[n]['node_data']
         final_route = ntp.subtree(temp_final_route, source_index, D)
         print('FINAL', list(final_route.edges(data=True)), nx.is_tree(final_route))
+        #print("nodes data PairOflightTree")
+        #for (n, data) in initial_route.nodes(data=True):
+            #print(n,data)
         colors = ['gray' if data['node_data']['wcn'] == True else 'white' for (n, data) in initial_route.nodes(data=True)]
         plt.figure()
         #pos_initial = layout.hierarchy_pos(initial_route, source_index)

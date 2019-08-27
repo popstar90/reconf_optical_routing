@@ -43,23 +43,27 @@ def subtree(T=nx.DiGraph(), src="", D=[] ):
     edges_set = set()
     for i in D:
         path = nx.shortest_path(tcopy, src, i)
-        edges_i_set = set()
-        for i in range(0, len(path) - 1):
-            edges_i_set.update({(path[i], path[i+1])})
-        edges_set.update(edges_i_set)
+        nodes_set.update(path)
+        edges_j_set = set()
+        for j in range(0, len(path) - 1):
+            edges_j_set.update({(path[j], path[j+1])})
+        edges_set.update(edges_j_set)
     nodes_list = list(nodes_set)
     edges_list = list(edges_set)
     print(edges_list)
-    mytree.add_nodes_from(nodes_list)
-    mytree.add_edges_from(edges_list)
-    for n in mytree.nodes():
-        if n in T.nodes():
-            mytree.nodes[n]['node_data'] = T.nodes[n]['node_data']
+    #mytree.add_nodes_from(nodes_list)
+    #mytree.add_edges_from(edges_list)
+    #print("Nodes mytree", mytree.nodes(data=True))
+    print("Nodes T", T.nodes(data=True))
+    
     for e in edges_list:
         try:
-            mytree[e[0]][e[1]]['edge_data'] = T[e[0]][e[1]]['edge_data']
+            mytree.add_edges_from([e], edge_data= T[e[0]][e[1]]['edge_data'])
         except:
             print("ERREUR!!!")
+    for n in nodes_list:
+        print('n', n)
+        mytree.add_node(n, node_data=T.nodes[n]['node_data'])
     print("Nodes", mytree.nodes(data=True))
     print('Edges', mytree.edges(data=True))
     #print('Wavelength', mytree.graph)
