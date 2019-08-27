@@ -568,3 +568,12 @@
 2019-08-26 00:50:54,733 [9960] INFO     reconfRoute: Wavelength converter placement 
 2019-08-26 00:50:54,746 [9960] INFO     reconfRoute: Routing generation process is starting 
 2019-08-26 00:50:54,826 [9960] INFO     reconfRoute: Routing generation process completed successfully 
+2019-08-26 00:59:03,569 [5892] INFO     __main__: Simulations parameters checking process starting
+2019-08-26 00:59:03,572 [5892] INFO     __main__: Simulations parameters checking process completed successfully
+2019-08-26 00:59:03,581 [5892] INFO     __main__: Cycle of Simulations starting
+2019-08-26 00:59:05,397 [5892] INFO     reconfRoute: Topology was created
+2019-08-26 00:59:05,398 [5892] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-08-26 00:59:05,408 [5892] INFO     reconfRoute: Simulation 0
+2019-08-26 00:59:05,419 [5892] INFO     reconfRoute: Wavelength converter placement 
+2019-08-26 00:59:05,430 [5892] INFO     reconfRoute: Routing generation process is starting 
+2019-08-26 00:59:05,508 [5892] INFO     reconfRoute: Routing generation process completed successfully 
