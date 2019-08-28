@@ -66,15 +66,15 @@ def based_dijkstra(G=nx.Graph(), src='',wave=0):
         cloud_dict[u] = weight
         del pqlocator_dict[u]
         u_neighbors = list(nx.neighbors(gcopy, u))
-        print(u+' neighbors', u_neighbors)
-        print("nodes_set", nodes_set)
+        #print(u+' neighbors', u_neighbors)
+        #print("nodes_set", nodes_set)
         for v in u_neighbors:
             if v not in nodes_set:
                 if weight_dict[v] > weight_dict[u] + 1:
                     weight_dict[v] = weight_dict[u] + 1
                     pq.update(pqlocator_dict[v], weight_dict[v], v)
                     pred_dict[v] = u
-        print("pred_dict current", pred_dict)
+        #print("pred_dict current", pred_dict)
         # if len(nodes_set) == len(list(gcopy.nodes())):
             # break
     nodes_list = list(nodes_set)
@@ -94,18 +94,18 @@ def based_dijkstra(G=nx.Graph(), src='',wave=0):
             try:
                 mytree[e[0]][e[1]]['edge_data'] = G[e[1]][e[0]]['edge_data']
             except:
-                print("pred_dict", pred_dict)
-                print("nodes_tree", nodes_list)
-                print("e", e)
-                print("edges_tree", edges_list)
-                print("G edges", list(G.edges()))
+                #print("pred_dict", pred_dict)
+                #print("nodes_tree", nodes_list)
+                #print("e", e)
+                #print("edges_tree", edges_list)
+                #print("G edges", list(G.edges()))
                 print("ECHEC DE L'AJOUT DES INFOS DE LIENS APRES DIJKSTRA")
                 exit(0)
     print("DIJSKRTA !!!!")
-    print("Nodes", mytree.nodes(data=True))
-    print('Edges', mytree.edges(data=True))
-    print('Wavelength', mytree.graph)
-    print("ARBORESCENCE", nx.is_arborescence(mytree))
+    #print("Nodes", mytree.nodes(data=True))
+    #print('Edges', mytree.edges(data=True))
+    #print('Wavelength', mytree.graph)
+    #print("ARBORESCENCE", nx.is_arborescence(mytree))
     return mytree
 
 

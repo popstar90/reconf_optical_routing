@@ -63,8 +63,8 @@ def span_tree(g=nx.Graph(), src="", wave=0, algo="prim"):
         except:
             tree[e[0]][e[1]]['edge_data'] = g[e[1]][e[0]]['edge_data']
     print("PRIM !!!!")
-    print("Nodes", tree.nodes(data=True))
-    print('Edges', tree.edges(data=True))
-    print('Wavelength', tree.graph)
-    print("ARBORESCENCE", nx.is_arborescence(tree))
+    #print("Nodes", tree.nodes(data=True))
+    #print('Edges', tree.edges(data=True))
+    #print('Wavelength', tree.graph)
+    #print("ARBORESCENCE", nx.is_arborescence(tree))
     return tree

@@ -63,7 +63,7 @@ class PairOfLightTree:
         # 1.Choisir la source de la paire d'arborescences par loi uniforme
         nodes_list = list(self.graph.nodes())  # Liste des noeuds
         source_index = str(cr.pick_one_numbers_uniformly(int(min(nodes_list)), int(max(nodes_list))))
-        print("src", source_index)
+        #print("src", source_index)
         #choisir aléatoirement la longueur d'onde à affecter aux liens
         wave = cr.pick_one_numbers_uniformly(0, 15)
         # 2 Construire l'arbre initial avec dijkstra
@@ -73,26 +73,26 @@ class PairOfLightTree:
         temp_final_route = mst.span_tree(self.graph, source_index,wave)
         # 2.2 Rechercher l'ensemble des feuilles de  l'arbre initial D1
         D1 = ntp.all_leafs(temp_initial_route)
-        print("D1", D1)
+        #print("D1", D1)
         # 2.3  Rechercher l'ensemble des feuilles D2 de  l'arbre final
         D2 = ntp.all_leafs(temp_final_route)
-        print("D2", D2)
+        #print("D2", D2)
         # Choisir aléatoirement au moins 50% des feuilles appartenant à D1 et D2 noté D comme destinations de la paire d'arbres
         D_intersec = list(D1.intersection(D2))
         # choisir uniformément au moins 50% de D comme destinations de la paire
-        print("INF", int(200/len(D_intersec)))
+        #print("INF", int(200/len(D_intersec)))
         Dpercent = cr.pick_one_numbers_uniformly(int(200/len(D_intersec)), 100)
         D = cr.pick_random_numbers(D_intersec, Dpercent)
         D = [str(i) for i in D]
-        print("DESTINATIONS SET", D)
+        #print("DESTINATIONS SET", D)
         # for (i,j) in coproute.edges():
         # if i
         initial_route = ntp.subtree(temp_initial_route, source_index, D)
-        print('INIT', list(initial_route.edges(data=True)), nx.is_tree(initial_route))
+        #print('INIT', list(initial_route.edges(data=True)), nx.is_tree(initial_route))
         # for n in nodes:
         # initial_route.nodes[n]['node_data'] = temp_initial_route.nodes[n]['node_data']
         final_route = ntp.subtree(temp_final_route, source_index, D)
-        print('FINAL', list(final_route.edges(data=True)), nx.is_tree(final_route))
+        #print('FINAL', list(final_route.edges(data=True)), nx.is_tree(final_route))
         #print("nodes data PairOflightTree")
         #for (n, data) in initial_route.nodes(data=True):
             #print(n,data)
@@ -111,5 +111,5 @@ class PairOfLightTree:
         path = Path(__file__).resolve().with_name("final.png")
         plt.savefig(str(path))
         plt.close()
-        print(" paire_of_lightree_generated")
+        #print(" paire_of_lightree_generated")
         return initial_route, final_route

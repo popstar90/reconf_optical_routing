@@ -26,9 +26,9 @@ def pick_random_numbers(liste=[], percent_length=50):
 
     """
     Retourne un échantillon de liste.
-    Chaque élément de l'échantillon  est obtenu grace à la loi uniforme de bornes: le plus petit
+    Chaque élément de l'échantillon  est obtenu grace �  la loi uniforme de bornes: le plus petit
     élément de liste  et le plus grand élément de liste
-    :param list liste: liste d'léments à utiliser pour généer l'échantillon
+    :param list liste: liste d'léments �  utiliser pour généer l'échantillon
     :param length: taille de l'échntillon
     :return list sample: echantillon issu de liste
     """
@@ -37,9 +37,9 @@ def pick_random_numbers(liste=[], percent_length=50):
     if percent_length != 0:
         if percent_length < 100:
             length = len(liste) * percent_length / 100
-            print('number_before', length)
+            #print('number_before', length)
             length = int(np.round(length))
-            print('number', length)
+            #print('number', length)
             sample = random.sample(liste, length)
         else:
             sample = copy.deepcopy(liste)

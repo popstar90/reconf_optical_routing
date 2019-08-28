@@ -50,24 +50,25 @@ def subtree(T=nx.DiGraph(), src="", D=[] ):
         edges_set.update(edges_j_set)
     nodes_list = list(nodes_set)
     edges_list = list(edges_set)
-    print(edges_list)
+    #print(edges_list)
     #mytree.add_nodes_from(nodes_list)
     #mytree.add_edges_from(edges_list)
     #print("Nodes mytree", mytree.nodes(data=True))
-    print("Nodes T", T.nodes(data=True))
+    #print("Nodes T", T.nodes(data=True))
     
     for e in edges_list:
         try:
             mytree.add_edges_from([e], edge_data= T[e[0]][e[1]]['edge_data'])
         except:
             print("ERREUR!!!")
+            exit(0)
     for n in nodes_list:
         print('n', n)
         mytree.add_node(n, node_data=T.nodes[n]['node_data'])
-    print("Nodes", mytree.nodes(data=True))
-    print('Edges', mytree.edges(data=True))
+    #print("Nodes", mytree.nodes(data=True))
+    #print('Edges', mytree.edges(data=True))
     #print('Wavelength', mytree.graph)
-    print("ARBORESCENCE", nx.is_arborescence(mytree))
+    #print("ARBORESCENCE", nx.is_arborescence(mytree))
     return mytree
 
 
