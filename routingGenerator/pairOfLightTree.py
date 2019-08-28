@@ -11,8 +11,9 @@ Ce module contient des fonctions permettant de construire une paire d'arbres mon
 
 """
 
-
+import random
 import networkx as nx
+from networkx.drawing.nx_agraph import write_dot, graphviz_layout
 import matplotlib.pyplot as plt
 plt.rcParams.update({'figure.max_open_warning': 0})
 from pathlib import Path
@@ -92,17 +93,24 @@ class PairOfLightTree:
         # initial_route.nodes[n]['node_data'] = temp_initial_route.nodes[n]['node_data']
         final_route = ntp.subtree(temp_final_route, source_index, D)
         print('FINAL', list(final_route.edges(data=True)), nx.is_tree(final_route))
-        #colors = ['gray' if data['node_data']['wcn'] == True else 'white' for (n, data) in initial_route.nodes(data=True)]
+        #print("nodes data PairOflightTree")
+        #for (n, data) in initial_route.nodes(data=True):
+            #print(n,data)
+        t0 = nx.drawing.nx_pydot.to_pydot(initial_route)
+        t0.write_png('initial.png')
+        colors = ['gray' if data['node_data']['wcn'] == True else 'white' for (n, data) in initial_route.nodes(data=True)]
         #plt.figure()
-        #pos_initial = layout.hierarchy_pos(initial_route, source_index)
-        #nx.draw(initial_route, node_color=colors, with_labels=True, font_weight='bold')
+        #pos_initial =graphviz_layout(initial_route, prog='dot')
+        #nx.draw(initial_route, pos_initial, node_color=colors, with_labels=True, font_weight='bold')
         #path = Path(__file__).resolve().with_name("initial.png")
         #plt.savefig(str(path))
         #plt.close()
-        #colors = ['gray' if data['node_data']['wcn'] == True else 'white' for (n, data) in final_route.nodes(data=True)]
+        colors = ['gray' if data['node_data']['wcn'] == True else 'white' for (n, data) in final_route.nodes(data=True)]
         #plt.figure()
-        #pos_final = layout.hierarchy_pos(final_route, source_index)
-        #nx.draw(final_route, node_color=colors, with_labels=True, font_weight='bold')
+        tz = nx.drawing.nx_pydot.to_pydot(final_route)
+        tz.write_png('final.png')
+        #pos_final = graphviz_layout(final_route, prog='dot')
+        #nx.draw(final_route, pos_final, node_color=colors, with_labels=True, font_weight='bold')
         #path = Path(__file__).resolve().with_name("final.png")
         #plt.savefig(str(path))
         #plt.close()

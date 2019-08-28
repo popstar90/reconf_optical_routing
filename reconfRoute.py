@@ -139,8 +139,8 @@ class ReconfRoute:
                 migrate_route = migration_class(initial_route, final_route)
                 logger.info("Routing switching process is starting ")
                 migrate_route.run()
-                #break    # A enlever lorsqu'on aura fini
-            break        # de même egalement
+                #break
+            break        #  # A enlever lorsqu'on aura fini
 
 
 def migrate_net(argument=0.5):
