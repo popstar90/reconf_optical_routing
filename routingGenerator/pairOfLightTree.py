@@ -109,14 +109,13 @@ class PairOfLightTree:
                 #break
             #node.set_color(colors[col])
         t0.write_png('initial.png')
-        exit(0)
         #plt.figure()
         #pos_initial =graphviz_layout(initial_route, prog='dot')
         #nx.draw(initial_route, pos_initial, node_color=colors, with_labels=True, font_weight='bold')
         #path = Path(__file__).resolve().with_name("initial.png")
         #plt.savefig(str(path))
         #plt.close()
-        colors = ['gray' if data['node_data']['wcn'] == True else 'white' for (n, data) in final_route.nodes(data=True)]
+        #colors = ['gray' if data['node_data']['wcn'] == True else 'white' for (n, data) in final_route.nodes(data=True)]
         #plt.figure()
         tz = nx.drawing.nx_pydot.to_pydot(final_route)
         tz.write_png('final.png')
