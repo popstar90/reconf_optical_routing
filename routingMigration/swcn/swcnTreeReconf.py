@@ -81,8 +81,8 @@ class SwcnTreeReconf:
                             self.current_tree = self.tree_update(self.current_tree, init_subtree, end_subtree)
                             if not  nx.is_arborescence(self.current_tree):
                                 #print("IL Y A PROBLEME AVEC LE RESPECT DE LA PROPRIETE D'ARBRE cat1")
-                                print("last_init_edges", init_subtree.edges())
-                                print("last_end_edges", end_subtree.edges())
+                                print("last_init_edges1", init_subtree.edges())
+                                print("last_end_edges1", end_subtree.edges())
                                 cur = nx.drawing.nx_pydot.to_pydot(self.current_tree)
                                 cur.write_png('current.png')
                                 exit(0)
@@ -108,15 +108,16 @@ class SwcnTreeReconf:
             # Pas de paire de catï¿½gorie 1 possible
             print("PAS OU PLUS DE PAIRE DE CATEGORIE 1")
             # Rechercher les paires de catï¿½gories 2 et faire la reconfiguration de ses paires de catï¿½gories 2
-            # crï¿½er la liste des noeuds  dans un ordre decroissant des profondeurs
-            topo_sort_current = reversed(list(nx.topological_sort(self.current_tree)))
-            conv_node = None
-            for n in topo_sort_current:
-                if nsp.is_convergent(self.current_tree, self.final_tree, n):
-                    conv_node = n
-                    break
+            # Parcourir la liste des noeuds convergents et prendre le premier noeud qui permettra
+            # de garantir la propriété d'arbre au futur arbre. Soit n ce noeud.
+            # n ne doit pas avoir pour ancêtre sur Tz un noeud convergent x qui n'est pas son ancêtre sur T0
+
             cur = nx.drawing.nx_pydot.to_pydot(self.current_tree)
             cur.write_png('current.png')
+            conv_node = self._conv_node_for_cat2()
+            if conv_node == None:
+                print("select conv for cat2 n'est pas encore au point")
+                exit(0)
             while conv_node != None:
                 init_subtree, end_subtree = self.select_shared_subtree(conv_node, self.current_tree, self.final_tree)
                 if init_subtree != None and end_subtree != None:
@@ -130,15 +131,11 @@ class SwcnTreeReconf:
                         print("last_end_edges2", end_subtree.edges())
                         exit(0)
                         return None
-                    topo_sort_current = reversed(list(nx.topological_sort(self.current_tree)))
-                    conv_node = None
-                    for n in topo_sort_current:
-                        if nsp.is_convergent(self.current_tree, self.final_tree, n):
-                            conv_node = n
-                            break
+                    conv_node = self._conv_node_for_cat2()
                 # CE ELSE DOIT ETRE ENLEVE SI TOUT VA BIEN CAR C'EST PAS NORMAL
                 else:
                     print("TIENS C'EST BIZZARE JE NE TROUVE PAS CAT 2")
+                    exit(0)
             if self._is_end(self.current_tree, self.final_tree):
                 return "FINI"  # pour le moment sinon APRES on va retourner la liste des valeurs des criteres de performances
             else:
@@ -391,33 +388,32 @@ class SwcnTreeReconf:
         st0, stn = None, None
         
         if len(path0) == 2 or len(pathz) == 2:
+            print("len(path0) == 2 or len(pathz) == 2")
             nbsc = self.root
-            if len(path0) == 2:
-                if not conv_node in D:
-                    D_pair = [d for d in D if len(set(nsp.get_ancestors(init_tree, d)).intersection(set([conv_node]))) > 0]
-                else:
-                    D_pair = [conv_node]
-            elif len(pathz) == 2:
-                D_pair = [d for d in D if len(set(nsp.get_ancestors(init_tree, d)).intersection(set(path0[1:]))) > 0]
+            # Ensemble des des destinations ayant un ancêtre sur nbsc->conv_node(hormis nbsc mais conv_node y compris) de T0
+            D_pair = [d for d in D if len(set(nsp.get_ancestors(init_tree, d)).intersection(set(path0[1:])))>0]
         else:
             ancestors0 = []
             ancestorsz = []
+            print("len(path0) != 2 and len(pathz) != 2")
             #ancestors of conv_node on T0 except the root of T0
             ancestors0=  reversed(path0[1:len(path0)-1]) # du plus proche de conv_node au plus distant
             #ancestors of conv_node on Tz except the root of T0
             ancestorsz=  reversed(pathz[1:len(pathz)-1])
-            # Garder les ancetres sur chaque arbre qui sont non divergents et qui ont sont dans Vc
+            # Garder les ancetres sur chaque arbre qui sont dans Vc
             is_wcn0 =nx.get_node_attributes(init_tree,'node_data')
-            partial_ancestors0 = [a for a in ancestors0 if not nsp.is_divergent(init_tree,end_tree,a) and is_wcn0[a]['wcn']==True]
+            partial_ancestors0 = [a for a in ancestors0 if is_wcn0[a]['wcn']==True]
             is_wcnz =nx.get_node_attributes(end_tree,'node_data')
-            partial_ancestorsz = [a for a in ancestorsz if not nsp.is_divergent(init_tree,end_tree,a) and is_wcnz[a]['wcn']==True]
+            partial_ancestorsz = [a for a in ancestorsz if is_wcnz[a]['wcn']==True]
+            print("partial_ancestorsz", partial_ancestorsz)
+            print("partial_ancestors0", partial_ancestors0)
             if len(partial_ancestors0) != 0 and len(partial_ancestorsz) != 0 and len(set(partial_ancestors0).intersection(set(partial_ancestorsz)))!=0:
                 find = False
-                #Pour chaque  ancetre non divergent(appartenant ï¿½ Vc)  de conv_node sur Tz faire
+                #Pour chaque  ancetre (appartenant à Vc)  de conv_node sur Tz faire
                 for n in partial_ancestorsz:
-                    #verifier s'il est ancï¿½tre ï¿½galement sur l'ancien arbre(donc ancï¿½tre commun non divergent ayant la propriï¿½tï¿½ de conversion)
+                    #verifier s'il est ancetre aussi sur l'ancien arbre(donc ancetre commun ayant la propriete de conversion)
                     if n in partial_ancestors0:
-                        # Alors vï¿½rifier que ce noeud va couvrir le mï¿½me sous-ensemble de destinations
+                        # Alors verifier que ce noeud va couvrir le meme sous-ensemble de destinations
                         temp_path0 = nx.shortest_path(init_tree, n, conv_node)
                         #sous-ensemble de D ayant un ancï¿½tre sur le segment n->conv_node de T0
                         D_old = [d for d in D if len(set(nsp.get_ancestors(init_tree, d)).intersection(set(temp_path0))) > 0]
@@ -426,6 +422,7 @@ class SwcnTreeReconf:
                         D_new = [d for d in D if len(set(nsp.get_ancestors(end_tree, d)).intersection(set(temp_pathz))) > 0]
                         # si c'est deux sous-ensemble sont identitques alors on tient la bonne racine de notre paire de categorie 2
                         # ï¿½ crï¿½er et cette devra couvrir le m^me ensemble de destination D_pair = D_old = D_new
+                        
                         if len(D_old) != 0 and len(D_new) != 0 and D_old == D_new:
                             nbsc = n
                             find = True
@@ -434,18 +431,14 @@ class SwcnTreeReconf:
                 if not find:
                     # Si une racine ne respecte pas les critiques alors prendre la racine de (T0,Tz) comme racine
                     nbsc = self.root
-                    # et prendre comme ensemble de destinations:
-                    # les elements de D ayant un ancï¿½tre sur le segment root->conv_node hormis root
-                    D_pair = [d for d in D if len(set(nsp.get_ancestors(init_tree, d)).intersection(set(path0[1:]))) > 0]
+                    D_pair = [d for d in D if len(set(nsp.get_ancestors(init_tree, d)).intersection(set(path0[1:])))>0]
             else:
                 # Si une racine ne respecte pas les critiques alors prendre la racine de (T0,Tz) comme racine
                 nbsc = self.root
-                # et prendre comme ensemble de destinations:
-                # les elements de D ayant un ancï¿½tre sur le segment root->conv_node hormis root
-                D_pair = [d for d in D if len(set(nsp.get_ancestors(init_tree, d)).intersection(set(path0[1:]))) > 0]
+                D_pair = [d for d in D if len(set(nsp.get_ancestors(init_tree, d)).intersection(set(path0[1:])))>0]
         print("step 1 end")
         print("D_pair", D_pair)
-        print("Root", nbsc)
+        print("Root, nbsc", self.root, nbsc)
         print("step 2 begin")
         st0 = ntp.subtree(init_tree, nbsc, D_pair) 
         print("step 2 end")
@@ -507,37 +500,57 @@ class SwcnTreeReconf:
                     print("condition 2 verified with node", conv_node)
         return verdict
 
-    def _is_fulfil_notree_cond(self, t0=nx.DiGraph(), tz=nx.DiGraph(), conv_node="0", div_node="0"):
+    def _is_fulfil_notree_cond(self, t0=nx.DiGraph(), tz=nx.DiGraph(), conv_node="0", node="0"):
         """
          Condition de non conservation de structure d'arbre rempli:
-         Il existe un noeud convergent x ancetre  de conv_node sur div_node->conv_node de Tz qui
-         n'est pas ancetre de conv_node sur div_node->conv_node de T0
+         Il existe un noeud convergent x ancetre  de conv_node sur node->conv_node de Tz qui
+         n'est pas ancetre de conv_node sur node->conv_node de T0
         :param t0:
         :param tz:
         :param conv_node:
-        :param div_node:
+        :param node:
         :return:
         """
         verdict = False
-        print("tree cond")
-        pathz = nx.shortest_path(tz, div_node, conv_node)
-        # ancetres convergents  de conv_node situÃ© sur div_node->conv_node de Tz
+        print("tree cond", conv_node)
+        pathz = nx.shortest_path(tz, node, conv_node)
+        # ancetres convergents  de conv_node situÃ© sur node->conv_node de Tz
         #conv_list = nsp.get_convergents(t0,tz,self.root)
         ancestorsz_conv = set(pathz[1:len(pathz)-1]).intersection(nsp.get_convergents(t0,tz,self.root))
         print("ancestorz_conv", ancestorsz_conv)
         if len(ancestorsz_conv) != 0:
-            path0 = nx.shortest_path(t0, div_node, conv_node)
+            path0 = nx.shortest_path(t0, node, conv_node)
             ancestors0 = set(path0[1:len(path0)-1])
             print("ancestors0", ancestors0)
-            if len(ancestors0) == 0:
-                verdict = True
-                print("pas tree")
-            else:
-                # ancetres convergents  de conv_node situÃ© sur div_node->conv_node de Tz qui ne sont
-                # pas sur div_node->conv_node de T0
+            if len(ancestors0) != 0:
+                # ancetres convergents  de conv_node situÃ© sur node->conv_node de Tz qui ne sont
+                # pas sur node->conv_node de T0
                 final_ancestors = ancestorsz_conv.difference(ancestors0)
-                print("final_ancestors")
+                print("final_ancestors", final_ancestors)
                 if len(final_ancestors) != 0:
                     verdict = True
                     print(" no tree condition verified with node", conv_node)
         return verdict
+    def _conv_node_for_cat2(self):
+        
+        # Parcourir la liste des noeuds convergents et prendre le premier noeud qui permettra
+        # de garantir la propriété d'arbre au futur arbre. Soit n ce noeud.
+        # n ne doit pas avoir pour ancêtre sur Tz un noeud convergent x qui n'est pas son ancêtre sur T0
+        conv_list = nsp.get_convergents(self.current_tree,self.final_tree,self.root)
+        #Ranger la liste par ordre de hauteur dans l'arbre courant
+        for i in range(0,len(conv_list)-1):
+            path0i = nx.shortest_path(self.current_tree, self.root, conv_list[i])
+            for j in range(i+1,len(conv_list)):
+                path0j = nx.shortest_path(self.current_tree, self.root, conv_list[j])
+                if len(path0i) > len(path0j):
+                    temp = conv_list[j]
+                    conv_list[j] = conv_list[i]
+                    conv_list[i] = temp 
+        myconv = None
+        for i in range(0,len(conv_list)):
+            curr_conv = conv_list[i]
+            if not self._is_fulfil_notree_cond(self.current_tree, self.final_tree, curr_conv, self.root):
+                myconv = curr_conv
+                break
+        return myconv
+                
