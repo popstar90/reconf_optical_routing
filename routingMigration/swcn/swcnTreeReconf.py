@@ -252,14 +252,18 @@ class SwcnTreeReconf:
             pathz = nx.shortest_path(end_tree, div_node, n)
             is_good = True
             for i in range(0,len(pathz)-1):
-                if (pathz[i],pathz[i+1]) in init_tree.edges():
+                edge =(pathz[i],pathz[i+1])
+                opposite_edge = (pathz[i+1],pathz[i])
+                if edge in init_tree.edges() or opposite_edge in init_tree.edges():
                     #pair_cg_nodes.remove(n)
                     is_good = False
                     break
              # Et Aucun lien du segment div_node----n  sur T0 ne doit appartenir � Tz
             path0 = nx.shortest_path(init_tree, div_node, n)
             for i in range(0,len(path0)-1):
-                if (path0[i],path0[i+1]) in end_tree.edges():
+                edge =(path0[i],path0[i+1])
+                opposite_edge = (path0[i+1],path0[i])
+                if edge in end_tree.edges() or opposite_edge in end_tree.edges():
                     #pair_cg_nodes.remove(n)
                     is_good = False
                     break
@@ -522,14 +526,14 @@ class SwcnTreeReconf:
             path0 = nx.shortest_path(t0, node, conv_node)
             ancestors0 = set(path0[1:len(path0)-1])
             print("ancestors0", ancestors0)
-            if len(ancestors0) != 0:
-                # ancetres convergents  de conv_node situé sur node->conv_node de Tz qui ne sont
-                # pas sur node->conv_node de T0
-                final_ancestors = ancestorsz_conv.difference(ancestors0)
-                print("final_ancestors", final_ancestors)
-                if len(final_ancestors) != 0:
-                    verdict = True
-                    print(" no tree condition verified with node", conv_node)
+            # ancetres convergents  de conv_node situé sur node->conv_node de Tz qui ne sont
+            # pas sur node->conv_node de T0
+            final_ancestors = ancestorsz_conv.difference(ancestors0)
+            print("final_ancestors", final_ancestors)
+            if len(final_ancestors) != 0:
+                verdict = True
+                print(" no tree condition verified with node", conv_node)
+                
         return verdict
     def _conv_node_for_cat2(self):
         
