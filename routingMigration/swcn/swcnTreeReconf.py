@@ -107,6 +107,7 @@ class SwcnTreeReconf:
         else:
             # Pas de paire de catï¿½gorie 1 possible
             print("PAS OU PLUS DE PAIRE DE CATEGORIE 1")
+            #return None
             # Rechercher les paires de catï¿½gories 2 et faire la reconfiguration de ses paires de catï¿½gories 2
             # Parcourir la liste des noeuds convergents et prendre le premier noeud qui permettra
             # de garantir la propriété d'arbre au futur arbre. Soit n ce noeud.
@@ -279,92 +280,43 @@ class SwcnTreeReconf:
         
         if len(pair_cg_nodes) == 0:
             return pair_of_subtrees_list
-        
-        print("step 3 end")
-        #chercher l'ensemble sous-ensembles de noeuds convergents E1,E2, pouvant appartenir ï¿½ des paire de sous-arbres differentes
-        # mais de mï¿½me racine
-        list_list_cg = []
-        while len(pair_cg_nodes)!=0:
-            conv = pair_cg_nodes[0]
-            conv_nodes = []
-            conv_nodes.append(conv)
-            if len(pair_cg_nodes) > 1:
-                for j in range(1,len(pair_cg_nodes)):
-                    path1 = nx.shortest_path(init_tree, div_node, conv)
-                    path2 = nx.shortest_path(init_tree, div_node, pair_cg_nodes[j])
-                    if len(set(path1[1:len(path1)-1]).intersection(set(path2[1:len(path2)-1]))) != 0:
-                        conv_nodes.append(pair_cg_nodes[j])
-            for n in conv_nodes:
-                pair_cg_nodes.remove(n)
-            list_list_cg.append(conv_nodes)
-        print("step 3 end")
+        # Ranger les noeuds convergents par ordre de profondeur(sur Tz) decrioissante par rapport à div_node
+        for i in range(0,len(pair_cg_nodes)-1):
+            pathzi = nx.shortest_path(self.final_tree, div_node, pair_cg_nodes[i])
+            for j in range(i+1,len(pair_cg_nodes)):
+                pathzj = nx.shortest_path(self.final_tree, div_node, pair_cg_nodes[j])
+                if len(pathzj) > len(pathzi):
+                    temp = pair_cg_nodes[j]
+                    pair_cg_nodes[j] = pair_cg_nodes[i]
+                    pair_cg_nodes[i] = temp 
         print("step 4 begin")
-        for one_subset in list_list_cg:
+        # construire des paires de catégorie 1 en parcourant cette liste de noeuds  convergents
+        #visited = 
+        for i in range(0,len(pair_cg_nodes)):
             #4.1 old subtree
-            # feuilles de st0 : n est feuille de t0 ou si au moins un descendant de n n'ai pas dans pair_cg_nodes
-            #alors il sera feuille
             print("step 4.1 begin")
-            D0 = []
-            for n in one_subset:
-                # descendants de n sur t0
-                if ntp.is_leaf(init_tree, n) or len(one_subset) == 1 :
-                    D0.append(n)
-                else:
-                    desc_n = set(nsp.get_descendants(init_tree, n))
-                    print("desc de n", n, list(desc_n))
-                    # pair_cg_nodes privï¿½ de n
-                    other_set = set(one_subset).difference(set([n]))
-                    print("other_set de n", n, list(other_set))
-                    #ensemble des descendants appartenant  ï¿½ other_set
-                    temp_set =desc_n.intersection(other_set)
-                    print("temp_set", n, list(temp_set))
-                    if len(temp_set) == 0:
-                        D0.append(n)
+            n = pair_cg_nodes[i]
+            D0 = [n]
             print("D0", D0)
             st0 = ntp.subtree(init_tree, div_node,D0)   
             print("step 4.1 end")
             print("step 4.2 begin")
             #new subtree
-            # feuilles de stn :n est feuille de tz si au moins un descendant de n n'ai pas dans pair_cg_nodes
-            #alors il sera feuille
-            Dn = []
-            for n in one_subset:
-                # descendants de n sur t0
-                if ntp.is_leaf(end_tree, n) or len(one_subset) == 1 :
-                    Dn.append(n)
-                else:
-                    desc_n = set(nsp.get_descendants(end_tree, n))
-                    print("desc de n", n, list(desc_n))
-                    # pair_cg_nodes privï¿½ de n
-                    other_set = set(one_subset).difference(set([n]))
-                    print("other_set de n", n, list(other_set))
-                    #ensemble des descendants appartenant  ï¿½ other_set
-                    temp_set =desc_n.intersection(other_set)
-                    print("temp_set", n, list(temp_set))
-                    if len(temp_set) == 0:
-                        Dn.append(n)
+            Dn = [n]
             print("Dn", Dn)
             stn = ntp.subtree(end_tree, div_node,Dn)   
-            #ensemble = True
-            #visted_pair = []
-            pair_to_be_deleted = []
-            for pair in pair_of_subtrees_list:
+            ensemble = True
+            for i in range(0,len(pair_of_subtrees_list)):
+                pair = pair_of_subtrees_list[i]
                 stn_pair = pair[1]
                 st0_pair = pair[0]
                 if len(set(list(stn_pair.edges())).intersection(set(list(stn.edges()))))!=0 or len(set(list(st0_pair.edges())).intersection(set(list(st0.edges()))))!=0:
-                    #ensemble = False
-                    pair_to_be_deleted.append(pair)
-                    #break
-            #if ensemble :     
-            if len(pair_to_be_deleted)==0:
+                    ensemble = False
+                    break    
+            if ensemble:
                 pair_of_subtrees_list.append((st0,stn))
-            else:
-                for p in pair_to_be_deleted:
-                    pair_of_subtrees_list.remove(p)
             print("step 4.2 end")
             
-        
-         
         print("Fin algo 1")
         
         return pair_of_subtrees_list
