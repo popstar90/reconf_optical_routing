@@ -2,10 +2,74 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5fec230c-295f-4c44-9c86-b7c83efd2787" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/current.png" afterPath="$PROJECT_DIR$/current.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/final.png" afterPath="$PROJECT_DIR$/final.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/initial.png" afterPath="$PROJECT_DIR$/initial.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python" afterPath="$PROJECT_DIR$/python" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/topologies/coronet_usa.png" afterPath="$PROJECT_DIR$/topologies/coronet_usa.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/topologies/geant2012.png" afterPath="$PROJECT_DIR$/topologies/geant2012.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/topologies/nsfnet.png" afterPath="$PROJECT_DIR$/topologies/nsfnet.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Reconfigure_MCR_for_SWCN.iml" afterPath="$PROJECT_DIR$/.idea/Reconfigure_MCR_for_SWCN.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.spyproject/codestyle.ini" afterPath="$PROJECT_DIR$/.spyproject/codestyle.ini" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.spyproject/encoding.ini" afterPath="$PROJECT_DIR$/.spyproject/encoding.ini" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.spyproject/vcs.ini" afterPath="$PROJECT_DIR$/.spyproject/vcs.ini" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.spyproject/workspace.ini" afterPath="$PROJECT_DIR$/.spyproject/workspace.ini" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commandLine.txt" afterPath="$PROJECT_DIR$/commandLine.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helper/__init__.py" afterPath="$PROJECT_DIR$/helper/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helper/customRandom.py" afterPath="$PROJECT_DIR$/helper/customRandom.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helper/exceptions/Empty.py" afterPath="$PROJECT_DIR$/helper/exceptions/Empty.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helper/exceptions/__init__.py" afterPath="$PROJECT_DIR$/helper/exceptions/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helper/nodeSelectProperty.py" afterPath="$PROJECT_DIR$/helper/nodeSelectProperty.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helper/nodeTreeProperty.py" afterPath="$PROJECT_DIR$/helper/nodeTreeProperty.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helper/node_type.py" afterPath="$PROJECT_DIR$/helper/node_type.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helper/queue/__init__.py" afterPath="$PROJECT_DIR$/helper/queue/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helper/queue/adaptable_heap_priority_queue.py" afterPath="$PROJECT_DIR$/helper/queue/adaptable_heap_priority_queue.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helper/queue/heap_priority_queue.py" afterPath="$PROJECT_DIR$/helper/queue/heap_priority_queue.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helper/queue/priority_queue_base.py" afterPath="$PROJECT_DIR$/helper/queue/priority_queue_base.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helper/treeCustomLayout.py" afterPath="$PROJECT_DIR$/helper/treeCustomLayout.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/launcher.py" afterPath="$PROJECT_DIR$/launcher.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/launcher.py.log" afterPath="$PROJECT_DIR$/launcher.py.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylauncher.log" afterPath="$PROJECT_DIR$/mylauncher.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reconfRoute.py" afterPath="$PROJECT_DIR$/reconfRoute.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routingGenerator/__init__.py" afterPath="$PROJECT_DIR$/routingGenerator/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routingGenerator/min_spanning_tree.py" afterPath="$PROJECT_DIR$/routingGenerator/min_spanning_tree.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routingGenerator/min_steiner_tree.py" afterPath="$PROJECT_DIR$/routingGenerator/min_steiner_tree.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routingGenerator/pairOfLightForest.py" afterPath="$PROJECT_DIR$/routingGenerator/pairOfLightForest.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routingGenerator/pairOfLightTree.py" afterPath="$PROJECT_DIR$/routingGenerator/pairOfLightTree.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routingGenerator/pairOfSemiLightTree.py" afterPath="$PROJECT_DIR$/routingGenerator/pairOfSemiLightTree.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routingGenerator/routinglog.log" afterPath="$PROJECT_DIR$/routingGenerator/routinglog.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routingGenerator/shortest_path_tree.py" afterPath="$PROJECT_DIR$/routingGenerator/shortest_path_tree.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routingMigration/__init__.py" afterPath="$PROJECT_DIR$/routingMigration/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routingMigration/flowCirculation.py" afterPath="$PROJECT_DIR$/routingMigration/flowCirculation.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routingMigration/fwcn/__init__.py" afterPath="$PROJECT_DIR$/routingMigration/fwcn/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routingMigration/helper/__init__.py" afterPath="$PROJECT_DIR$/routingMigration/helper/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routingMigration/helper/nodeSelectProperty.py" afterPath="$PROJECT_DIR$/routingMigration/helper/nodeSelectProperty.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routingMigration/helper/nodeTreeProperty.py" afterPath="$PROJECT_DIR$/routingMigration/helper/nodeTreeProperty.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routingMigration/migrationlog.log" afterPath="$PROJECT_DIR$/routingMigration/migrationlog.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routingMigration/migreA.py" afterPath="$PROJECT_DIR$/routingMigration/migreA.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routingMigration/nwcn/__init__.py" afterPath="$PROJECT_DIR$/routingMigration/nwcn/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routingMigration/swcn/__init__.py" afterPath="$PROJECT_DIR$/routingMigration/swcn/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routingMigration/swcn/swcnTreeReconf.py" afterPath="$PROJECT_DIR$/routingMigration/swcn/swcnTreeReconf.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routingMigration/swcn/swcn_tree_reconf/__init__.py" afterPath="$PROJECT_DIR$/routingMigration/swcn/swcn_tree_reconf/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routingMigration/swcn/turn.py" afterPath="$PROJECT_DIR$/routingMigration/swcn/turn.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/topologies/__init__.py" afterPath="$PROJECT_DIR$/topologies/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/topologies/coronet_usa.gml" afterPath="$PROJECT_DIR$/topologies/coronet_usa.gml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/topologies/geant2012.gml" afterPath="$PROJECT_DIR$/topologies/geant2012.gml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/topologies/nsfnet.gml" afterPath="$PROJECT_DIR$/topologies/nsfnet.gml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/topologies/topo.py" afterPath="$PROJECT_DIR$/topologies/topo.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/topologies/wc_placement.py" afterPath="$PROJECT_DIR$/topologies/wc_placement.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/untitled0.py" afterPath="$PROJECT_DIR$/untitled0.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/untitled1.py" afterPath="$PROJECT_DIR$/untitled1.py" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,19 +79,14 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
     <option name="GROUP_SCHEMA" value="true" />
     <option name="GROUP_CONTENTS" value="false" />
     <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand />
-    <select />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FUSProjectUsageTrigger">
     <session id="473732873">
       <usages-collector id="statistics.lifecycle.project">
@@ -158,45 +217,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file leaf-file-name="swcnTreeReconf.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routingMigration/swcn/swcnTreeReconf.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="135" column="12" selection-start-line="135" selection-start-column="12" selection-end-line="135" selection-end-column="12" />
+            <state relative-caret-position="84">
+              <caret line="117" column="38" selection-start-line="117" selection-start-column="38" selection-end-line="117" selection-end-column="38" />
               <folding>
-                <element signature="e#17#38#0" expanded="true" />
+                <element signature="e#18#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="pairOfLightTree.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routingGenerator/pairOfLightTree.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1802">
-              <caret line="120" column="8" selection-start-line="120" selection-start-column="8" selection-end-line="121" selection-end-column="33" />
-              <folding>
-                <element signature="e#291#304#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="213">
+              <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routingGenerator/final.png">
-          <provider selected="true" editor-type-id="images" />
+      <file leaf-file-name="commandLine.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/commandLine.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="73" />
+              <folding />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routingGenerator/initial.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="reconfRoute.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/reconfRoute.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1802">
-              <caret line="111" column="33" selection-start-line="111" selection-start-column="33" selection-end-line="111" selection-end-column="33" />
+            <state relative-caret-position="321">
+              <caret line="183" column="81" selection-start-line="183" selection-start-column="81" selection-end-line="183" selection-end-column="81" />
               <folding>
                 <element signature="e#1155#1191#0" expanded="true" />
               </folding>
@@ -204,29 +261,22 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/helper/nodeTreeProperty.py">
+      <file leaf-file-name="testPandas.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testPandas.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+            <state relative-caret-position="270">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="71" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="launcher.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/launcher.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
+            <state relative-caret-position="192">
               <caret line="68" column="97" selection-start-line="68" selection-start-column="97" selection-end-line="68" selection-end-column="97" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/commandLine.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="73" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -290,13 +340,14 @@
         <option value="$PROJECT_DIR$/routingGenerator/min_steiner_tree.py" />
         <option value="$PROJECT_DIR$/launcher.py" />
         <option value="$PROJECT_DIR$/routingMigration/flowCirculation.py" />
-        <option value="$PROJECT_DIR$/reconfRoute.py" />
         <option value="$PROJECT_DIR$/helper/nodeSelectProperty.py" />
         <option value="$PROJECT_DIR$/untitled1.py" />
         <option value="$PROJECT_DIR$/helper/nodeTreeProperty.py" />
         <option value="$PROJECT_DIR$/helper/performance_criteria.py" />
         <option value="$PROJECT_DIR$/test_dataFrame.py" />
         <option value="$PROJECT_DIR$/routingGenerator/pairOfLightTree.py" />
+        <option value="$PROJECT_DIR$/testPandas.py" />
+        <option value="$PROJECT_DIR$/reconfRoute.py" />
         <option value="$PROJECT_DIR$/routingMigration/swcn/swcnTreeReconf.py" />
       </list>
     </option>
@@ -307,50 +358,73 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="51" />
-    <option name="y" value="76" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="65" />
+    <option name="y" value="24" />
     <option name="width" value="1301" />
     <option name="height" value="744" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
-          <expand>
-            <path>
-              <item name="Reconfigure_MCR_for_SWCN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Reconfigure_MCR_for_SWCN" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Reconfigure_MCR_for_SWCN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Reconfigure_MCR_for_SWCN" type="462c0819:PsiDirectoryNode" />
-              <item name="helper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Reconfigure_MCR_for_SWCN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Reconfigure_MCR_for_SWCN" type="462c0819:PsiDirectoryNode" />
-              <item name="routingGenerator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Reconfigure_MCR_for_SWCN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Reconfigure_MCR_for_SWCN" type="462c0819:PsiDirectoryNode" />
-              <item name="routingMigration" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Reconfigure_MCR_for_SWCN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Reconfigure_MCR_for_SWCN" type="462c0819:PsiDirectoryNode" />
-              <item name="routingMigration" type="462c0819:PsiDirectoryNode" />
-              <item name="swcn" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Reconfigure_MCR_for_SWCN" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Reconfigure_MCR_for_SWCN" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Reconfigure_MCR_for_SWCN" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Reconfigure_MCR_for_SWCN" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Reconfigure_MCR_for_SWCN" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="routingGenerator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -360,6 +434,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -385,6 +460,104 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Reconfigure_MCR_for_SWCN" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Reconfigure_MCR_for_SWCN" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Reconfigure_MCR_for_SWCN" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Reconfigure_MCR_for_SWCN" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <module name="Reconfigure_MCR_for_SWCN" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -405,15 +578,99 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
       <envs />
-      <method v="2" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Reconfigure_MCR_for_SWCN" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
     </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Reconfigure_MCR_for_SWCN" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Reconfigure_MCR_for_SWCN" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Reconfigure_MCR_for_SWCN" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -438,29 +695,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="65" y="24" width="1301" height="744" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4922179" visible="true" weight="0.22314675" />
-      <window_info id="Structure" order="1" weight="0.25" />
-      <window_info id="Favorites" order="2" sideWeight="0.5077821" side_tool="true" weight="0.24940239" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.26885247" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32786885" />
-      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="right" id="SciView" order="4" weight="0.32957292" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1625498" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32043344" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -477,12 +732,60 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/routingGenerator/pairOfLightTree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2160">
+          <caret line="120" column="8" selection-start-line="120" selection-start-column="8" selection-end-line="121" selection-end-column="33" />
+          <folding>
+            <element signature="e#291#304#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reconfRoute.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1998">
+          <caret line="111" column="33" selection-start-line="111" selection-start-column="33" selection-end-line="111" selection-end-column="33" />
+          <folding>
+            <element signature="e#1155#1191#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper/nodeTreeProperty.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/launcher.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1134">
+          <caret line="68" column="97" selection-start-line="68" selection-start-column="97" selection-end-line="68" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commandLine.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../related_works/SimReconfig/main.py" />
     <entry file="file://$PROJECT_DIR$/topologies/nsfnet.gml">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="7" selection-start-column="7" selection-end-column="7" />
+        <state relative-caret-position="0">
+          <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -493,7 +796,7 @@
     <entry file="file://$PROJECT_DIR$/helper/queue/priority_queue_base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -502,8 +805,8 @@
     <entry file="file://C:/../2017-2018/Aout2018-septembre2018/essay_simulation/related_works/SimReconfig/main.py" />
     <entry file="file://$PROJECT_DIR$/routingGenerator/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" selection-start-column="17" selection-end-column="17" />
+        <state relative-caret-position="0">
+          <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -516,12 +819,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/launcher.py.log" />
     <entry file="file://$PROJECT_DIR$/mylog.log" />
-    <entry file="file://$PROJECT_DIR$/routingGenerator/routinglog.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routingMigration/migrationlog.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/routingGenerator/pairOfLightForest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -583,11 +880,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mylauncher.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-67800" />
+        <state relative-caret-position="-67800">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routingMigration/flowCirculation.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/routingGenerator/min_spanning_tree.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -606,14 +902,14 @@
     <entry file="file://$PROJECT_DIR$/routingGenerator/shortest_path_tree.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/untitled1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
-          <caret line="45" column="59" lean-forward="true" selection-start-line="45" selection-start-column="59" selection-end-line="45" selection-end-column="59" />
+          <caret line="45" column="59" selection-start-line="45" selection-start-column="59" selection-end-line="45" selection-end-column="59" />
         </state>
       </provider>
     </entry>
@@ -626,63 +922,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routingMigration/swcn/current.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routingMigration/swcn/swcnTreeReconf.py">
+    <entry file="file://$PROJECT_DIR$/helper/nodeTreeProperty.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="135" column="12" selection-start-line="135" selection-start-column="12" selection-end-line="135" selection-end-column="12" />
-          <folding>
-            <element signature="e#17#38#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="18">
+          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commandLine.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="73" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routingGenerator/pairOfLightTree.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1802">
-          <caret line="120" column="8" selection-start-line="120" selection-start-column="8" selection-end-line="121" selection-end-column="33" />
-          <folding>
-            <element signature="e#291#304#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="213">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routingGenerator/final.png">
-      <provider selected="true" editor-type-id="images" />
+    <entry file="file://$PROJECT_DIR$/launcher.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="68" column="97" selection-start-line="68" selection-start-column="97" selection-end-line="68" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routingGenerator/initial.png">
-      <provider selected="true" editor-type-id="images" />
+    <entry file="file://$PROJECT_DIR$/testPandas.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/reconfRoute.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1802">
-          <caret line="111" column="33" selection-start-line="111" selection-start-column="33" selection-end-line="111" selection-end-column="33" />
+        <state relative-caret-position="321">
+          <caret line="183" column="81" selection-start-line="183" selection-start-column="81" selection-end-line="183" selection-end-column="81" />
           <folding>
             <element signature="e#1155#1191#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/helper/nodeTreeProperty.py">
+    <entry file="file://$PROJECT_DIR$/routingMigration/swcn/swcnTreeReconf.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/launcher.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="68" column="97" selection-start-line="68" selection-start-column="97" selection-end-line="68" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commandLine.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="73" />
+        <state relative-caret-position="84">
+          <caret line="117" column="38" selection-start-line="117" selection-start-column="38" selection-end-line="117" selection-end-column="38" />
+          <folding>
+            <element signature="e#18#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

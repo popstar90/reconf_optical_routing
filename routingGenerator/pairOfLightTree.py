@@ -48,6 +48,8 @@ class PairOfLightTree:
         """
         self.graph = g
 
+    def set_net(self, g):
+        self.graph = g
 
     def generate(self):
 
