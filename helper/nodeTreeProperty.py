@@ -20,6 +20,9 @@ def is_leaf(g=nx.DiGraph(), node=""):
 
 
 def all_leafs(g=nx.DiGraph):
+    """
+    Retourne toutes les feuilles d'un arbre
+    """
     leafs_set = set()
     for n in g.nodes():
         if is_leaf(g, n):

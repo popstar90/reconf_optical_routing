@@ -34,7 +34,8 @@ import os
 import sys
 import logging
 import daiquiri
-
+import numpy as np
+import pandas as pd
 
 class ReconfRoute:
 
@@ -70,6 +71,13 @@ class ReconfRoute:
 
         """
         self.param = param
+        routing_class = load_class(package_name="routingGenerator", algo=route_pair(self.param['paire_route_type']))
+        self.route_generator = routing_class()
+        migration_class = load_class(package_name="routingMigration",
+                                     sub_package_name=migrate_net(self.param['net_type']),
+                                     algo=self.param['algo'])
+        self.migrate_route = migration_class()
+        #self.criteria = {'add_cost':}
 
     def simulate(self):
         """
@@ -96,22 +104,37 @@ class ReconfRoute:
         d = dict()
         if self.param['net_type'] == 0.5:
             d = {0: {'min': 50, 'max': 75}, 1: {'min': 25, 'max': 50},
-                 2: {'min': 0, 'max': 25}}  # Liste des plages de pourcentages de swcn choisies
+                 2: {'min': 1, 'max': 25}}  # Liste des plages de pourcentages de swcn choisies
         elif self.param['net_type'] == 0:
             d = {0: {'min': 0, 'max': 0}}
         else:
             d = {0: {'min': 100, 'max': 100}}
         logger.info("Cycle of 3 Simulations starting")
         #Pour chaque topologie virtuelle faire
+        df_add_cost = pd.DataFrame()
+        df_duration = pd.DataFrame()
+        df_interrupt_duration = pd.DataFrame()
+        if len(d) != 3:
+            df_add_cost  = pd.DataFrame({str(d[0]['min'])+'-'+str(d[0]['max']):[0.0, 0.0, 0.0,0.0]}, index= ['AVG', 'SD', 'Min', 'Max'])
+            df_duration = pd.DataFrame({str(d[0]['min']) +'-'+str(d[0]['max']): [0.0, 0.0, 0.0, 0.0]}, index=['AVG', 'SD', 'Min', 'Max'])
+            df_interrupt_duration = pd.DataFrame({str(d[0]['min']) +'-'+ str(d[0]['max']): [0.0, 0.0, 0.0, 0.0]}, index=['AVG', 'SD', 'Min', 'Max'])
+        else:
+            df_add_cost = pd.DataFrame({str(d[0]['min']) +'-'+ str(d[0]['max']): [0.0, 0.0, 0.0, 0.0], str(d[1]['min']) +'-'+ str(d[1]['max']): [0.0, 0.0, 0.0, 0.0], str(d[2]['min']) +'-'+ str(d[2]['max']): [0.0, 0.0, 0.0, 0.0]}, index=['AVG', 'SD', 'Min', 'Max'])
+            df_duration = pd.DataFrame({str(d[0]['min']) +'-'+ str(d[0]['max']): [0.0, 0.0, 0.0, 0.0], str(d[1]['min']) +'-'+ str(d[1]['max']): [0.0, 0.0, 0.0, 0.0], str(d[2]['min']) +'-'+ str(d[2]['max']): [0.0, 0.0, 0.0, 0.0]},  index=['AVG', 'SD', 'Min', 'Max'])
+            df_interrupt_duration = pd.DataFrame({str(d[0]['min']) +'-'+ str(d[0]['max']): [0.0, 0.0, 0.0, 0.0], str(d[1]['min']) +'-'+ str(d[1]['max']): [0.0, 0.0, 0.0, 0.0], str(d[2]['min']) +'-'+ str(d[2]['max']): [0.0, 0.0, 0.0, 0.0]}, index=['AVG', 'SD', 'Min', 'Max'])
+        indice = 0
         for key, item in d.items():
             # Faire une simulation : une simulation contient N processus
             N = self.param['size']
             min_value = item['min']
             max_value = item['max']
             logger.info("Simulation " + str(key))
+            add_cost_array = np.zeros(N, dtype =int)
+            duration_array = np.zeros(N, dtype =int)
+            interrupt_duration_array = np.zeros(N, dtype=int)
             for i in range(0, N):
                 # Pour chaque processus faire
-                print("TOUR :", i)
+                print("TOUR :", i+1)
                 # Définition du processus
                 # 1.2 Choix des noeuds ayant la capacité  de conversion de longueur d'onde
                 logger.info("Wavelength converter placement ")
@@ -127,20 +150,55 @@ class ReconfRoute:
                 #wavelengths_list = list(range(0, 16))
                 # 2. Generation du routage initial et du routage final
                 logger.info("Routing generation process is starting ")
-                routing_class = load_class(package_name="routingGenerator", algo=route_pair(self.param['paire_route_type']))
-                route_generator = routing_class(net)
-                initial_route, final_route = route_generator.generate()
+                self.route_generator.set_net(net)
+                initial_route, final_route = self.route_generator.generate()
                 logger.info("Routing generation process completed successfully ")
                 # Génération du flux
                 #Simuler ici une circulation du flux sur l'arbre initial
                 # 3. Migration de routage
-                migration_class = load_class(package_name="routingMigration", sub_package_name=migrate_net(self.param['net_type']),
-                                             algo=self.param['algo'])
-                migrate_route = migration_class(initial_route, final_route)
+                self.migrate_route.set_pair(initial_route, final_route)
                 logger.info("Routing switching process is starting ")
-                migrate_route.run()
+                criteria_dict = self.migrate_route.run()
+                add_cost_array[i] = criteria_dict['add_cost']
+                duration_array[i]  = criteria_dict['duration']
+                interrupt_duration_array[i] = criteria_dict['interrupt_duration']
                 #break
             #break        #  # A enlever lorsqu'on aura fini
+            #print(add_cost_array)
+            #print(duration_array)
+            #print(np.mean(add_cost_array))
+            #print(np.mean(duration_array))
+            #exit(0)
+            #Update dataFrames
+            df_add_cost.at['Min', str(d[indice]['min']) + '-' + str(d[indice]['max'])] = np.min(add_cost_array)
+            df_add_cost.at['Max', str(d[indice]['min']) + '-' + str(d[indice]['max'])] = np.max(add_cost_array)
+            df_add_cost.at['AVG', str(d[indice]['min']) + '-' + str(d[indice]['max'])] = round(np.mean(add_cost_array), 2) 
+            df_add_cost.at['SD', str(d[indice]['min']) + '-' + str(d[indice]['max'])] = round(np.std(add_cost_array), 2)
+            df_duration.at['Min', str(d[indice]['min']) + '-' + str(d[indice]['max'])] = np.min(duration_array)
+            df_duration.at['Max', str(d[indice]['min']) + '-' + str(d[indice]['max'])] = np.max(duration_array)
+            df_duration.at['AVG', str(d[indice]['min']) + '-' + str(d[indice]['max'])] = round(np.mean(duration_array), 2)
+            df_duration.at['SD', str(d[indice]['min']) + '-' + str(d[indice]['max'])] = round(np.std(duration_array), 2)
+            df_interrupt_duration.at['Min', str(d[indice]['min']) + '-' + str(d[indice]['max'])] = np.min(interrupt_duration_array)
+            df_interrupt_duration.at['Max', str(d[indice]['min']) + '-' + str(d[indice]['max'])] = np.max(interrupt_duration_array)
+            df_interrupt_duration.at['AVG', str(d[indice]['min']) + '-' + str(d[indice]['max'])] = round(np.mean(interrupt_duration_array), 2)
+            df_interrupt_duration.at['SD', str(d[indice]['min']) + '-' + str(d[indice]['max'])] = round(np.std(interrupt_duration_array), 2)
+            indice = indice +1
+        #exit(0)
+        # save excel file
+        with pd.ExcelWriter('results'+os.sep+self.param['net_topo']+'.xlsx') as writer:
+            df_add_cost.to_excel(writer, sheet_name='add_cost')
+            df_duration.to_excel(writer, sheet_name='duration')
+            df_interrupt_duration.to_excel(writer, sheet_name='interrupt_duration')
+        print("-------------------------------------------------------")
+        print("cout additionnelle")
+        print(df_add_cost.head(4))
+        print("-------------------------------------------------------")
+        print("temps de reconfiguration")
+        print(df_duration.head(4))
+        print("-------------------------------------------------------")
+        print("interruption")
+        print(df_interrupt_duration)
+        print("Une copie de ces resultats sont dans le classeur {}".format('results'+os.sep+self.param['net_topo']+'.xlsx'))
 
 
 def migrate_net(argument=0.5):

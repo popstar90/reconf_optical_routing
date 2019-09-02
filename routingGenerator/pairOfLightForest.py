@@ -5,7 +5,7 @@ A ecrire
 
 class PairOfLightForest:
     """
-    Ecrire
+    A ecrire si vous voulez obtenir une paire d'arbres multi-optiques
     """
 
     def __init__(self):

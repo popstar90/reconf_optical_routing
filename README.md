@@ -1,2 +1,2 @@
-Reconfigurer le routage optique. 
+Reconfigurer le routage multicast optique. 
 Simulateur en cours... 

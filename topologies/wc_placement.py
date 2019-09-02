@@ -22,7 +22,7 @@ class Placement:
 
     """
 
-    Classe qui réseau le problème de placement des convertisseurs de longueur d'onde.
+    Classe qui résout le problème de placement des convertisseurs de longueur d'onde.
 
     """
     def __init__(self, wcn_min_node_percent=50, wcn_max_node_percent=75, algo="random"):

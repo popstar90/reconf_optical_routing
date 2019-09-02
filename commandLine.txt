@@ -1,5 +1,0 @@
-La commande ci-dessous est la commande à lancer pour commencer les simulations:
-python3 launcher.py --topo=nsfnet --netType=0.5 --routeType=1 --size=1000
-
-N.B: Les paramètres topo, netType et routeType sont facultatif.
-Cependant, vous pouvez les modifier conforméménet au guide utilisateur
