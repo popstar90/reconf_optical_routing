@@ -1,3 +1,11 @@
+Installation
+------------
+- python >= 3.5
+- Les paquets python suivants sont requis pour une execution : numpy, scipy, matplotlib, pandas, networkx, daiquiri et graphviz.
+Pour l'installation des paquets, il suffit de saisir dans la ligne de commande: pip install nom_paquet
+Vous remplacerez nom_paquet succesivement par numpy, scipy, etc.
+
+
 Execution
 ---------
 

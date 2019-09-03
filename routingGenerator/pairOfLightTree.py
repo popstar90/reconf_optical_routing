@@ -64,9 +64,9 @@ class PairOfLightTree:
         """
         initial_route = nx.DiGraph()
         final_route = nx.DiGraph()
+        nodes_list = list(self.graph.nodes())  # Liste des noeuds
         while True:
             # 1.Choisir la source de la paire d'arborescences par loi uniforme
-            nodes_list = list(self.graph.nodes())  # Liste des noeuds
             source_index = str(cr.pick_one_numbers_uniformly(int(min(nodes_list)), int(max(nodes_list))))
             #print("src", source_index)
             #choisir aléatoirement la longueur d'onde à affecter aux liens
