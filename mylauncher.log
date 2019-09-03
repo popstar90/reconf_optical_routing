@@ -1,0 +1,33 @@
+2019-09-03 11:00:06,338 [14461] INFO     __main__: Simulations parameters checking process starting
+2019-09-03 11:00:06,339 [14461] INFO     __main__: Simulations parameters checking process completed successfully
+2019-09-03 11:00:06,341 [14461] INFO     __main__: Cycle of Simulations starting
+2019-09-03 11:00:06,753 [14461] INFO     reconfRoute: Topology was created
+2019-09-03 11:00:06,753 [14461] INFO     reconfRoute: Cycle of 3 Simulations starting
+2019-09-03 11:00:06,757 [14461] INFO     reconfRoute: Simulation 0
+2019-09-03 11:00:06,759 [14461] INFO     reconfRoute: Wavelength converter placement 
+2019-09-03 11:00:06,763 [14461] INFO     reconfRoute: Routing generation process is starting 
+2019-09-03 11:00:07,000 [14461] INFO     reconfRoute: Routing generation process completed successfully 
+2019-09-03 11:00:07,014 [14461] INFO     reconfRoute: Routing switching process is starting 
+2019-09-03 11:00:07,178 [14461] INFO     reconfRoute: Wavelength converter placement 
+2019-09-03 11:00:07,180 [14461] INFO     reconfRoute: Routing generation process is starting 
+2019-09-03 11:00:07,406 [14461] INFO     reconfRoute: Routing generation process completed successfully 
+2019-09-03 11:00:07,426 [14461] INFO     reconfRoute: Routing switching process is starting 
+2019-09-03 11:00:07,612 [14461] INFO     reconfRoute: Simulation 1
+2019-09-03 11:00:07,612 [14461] INFO     reconfRoute: Wavelength converter placement 
+2019-09-03 11:00:07,617 [14461] INFO     reconfRoute: Routing generation process is starting 
+2019-09-03 11:00:07,916 [14461] INFO     reconfRoute: Routing generation process completed successfully 
+2019-09-03 11:00:07,933 [14461] INFO     reconfRoute: Routing switching process is starting 
+2019-09-03 11:00:08,266 [14461] INFO     reconfRoute: Wavelength converter placement 
+2019-09-03 11:00:08,269 [14461] INFO     reconfRoute: Routing generation process is starting 
+2019-09-03 11:00:08,478 [14461] INFO     reconfRoute: Routing generation process completed successfully 
+2019-09-03 11:00:08,492 [14461] INFO     reconfRoute: Routing switching process is starting 
+2019-09-03 11:00:08,671 [14461] INFO     reconfRoute: Simulation 2
+2019-09-03 11:00:08,671 [14461] INFO     reconfRoute: Wavelength converter placement 
+2019-09-03 11:00:08,675 [14461] INFO     reconfRoute: Routing generation process is starting 
+2019-09-03 11:00:08,872 [14461] INFO     reconfRoute: Routing generation process completed successfully 
+2019-09-03 11:00:08,881 [14461] INFO     reconfRoute: Routing switching process is starting 
+2019-09-03 11:00:08,979 [14461] INFO     reconfRoute: Wavelength converter placement 
+2019-09-03 11:00:08,982 [14461] INFO     reconfRoute: Routing generation process is starting 
+2019-09-03 11:00:09,367 [14461] INFO     reconfRoute: Routing generation process completed successfully 
+2019-09-03 11:00:09,393 [14461] INFO     reconfRoute: Routing switching process is starting 
+2019-09-03 11:00:10,075 [14461] INFO     __main__: Route reconfiguration completed successfully switching process is starting 
